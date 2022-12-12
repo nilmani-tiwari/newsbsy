@@ -61,3 +61,13 @@ admin.site.register(school_machine_api,school_machine_apiAdmin)
 class PumpapiAdmin(admin.ModelAdmin):
    list_display = ['volt1']
 admin.site.register(Pumpapi,PumpapiAdmin)
+
+
+from django.views.generic.list import ListView
+class StudentAdmin(admin.ModelAdmin):
+   list_display = ( "user_name","student_card_number", "gender", "email", "school_code","medium_name","class_name","division_name","created_on","created_by")
+   list_filter = (   "school_code","medium_name","class_name","division_name","created_on","created_by")
+   list_editable = ('class_name','student_card_number')
+
+admin.site.register(StudentMaster, StudentAdmin)
+
