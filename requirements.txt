@@ -1,0 +1,15 @@
+django
+djangorestframework
+#mysqlclient
+pyserial
+python-dateutil
+requests
+django-cleanup
+django_resized
+pillow
+razorpay
+pymysql
+django-online-users
+social-auth-app-django
+django_resized
+pyserial

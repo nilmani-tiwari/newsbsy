@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notification API</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="{% static 'js/css/style.css' %}">
+</head>
+<body onload="notifyMe()">
+    <div class="container">
+        <h1>JavaScript Notification API Demo11</h1>
+        <div class="error"></div>
+    </div>
+    
+    <button onclick="notifyMe()">Notify Me</button>
+    <!--<button onclick="notifyMe()">Notify me!</button>-->
+    <!-- <script src="js/app.js"></script> -->
+    <script src="{% static 'js/app_notification.js' %}"></script>
+    
+    <script>
+ function notifyMe() {
+    if (!window.Notification) {
+        console.log('Browser does not support notifications.');
+    } else {
+        // check if permission is already granted
+        if (Notification.permission === 'granted') {
+            // show notification here
+            var notify = new Notification('Hi there!', {
+                body: 'How are you doing?',
+                icon: 'https://www.sbsy.co.in/media/images/e63fb36b-43d9-4d63-ab2b-ea62fa0debfe_RItAuYx.jpg',
+            });
+        } else {
+            // request permission from user
+            Notification.requestPermission().then(function (p) {
+                if (p === 'granted') {
+                    // show notification here
+                    var notify = new Notification('Hi there!', {
+                        body: 'How are you doing?',
+                        icon: 'https://bit.ly/2DYqRrh',
+                    });
+                } else {
+                    console.log('User blocked notifications.');
+                }
+            }).catch(function (err) {
+                console.error(err);
+            });
+        }
+    }
+}
+        
+    </script>
+    
+    
+    
+    
+    
+    <script>
+        
+        // request permission on page load
+document.addEventListener('DOMContentLoaded', function() {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.');
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
+
+function notifyMe() {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Hey there! You've been notified!",
+    });
+
+    notification.onclick = function() {
+      window.open("http://stackoverflow.com/a/13328397/1269037");
+    };
+  }
+}
+
+notifyMe();
+    </script>
+    
+    
+    
+    
+    
+    
+</body>
+</html>

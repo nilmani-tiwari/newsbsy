@@ -1,0 +1,222 @@
+[
+    {
+        "created_on": "2021-03-08 06:51:22.831638",
+        "gwid": "90",
+        "id": 2,
+        "machine_no": "3",
+        "machine_status": null,
+        "password": "",
+        "school_code": "demo1",
+        "ssid": ""
+    },
+    {
+        "created_on": "2021-03-08 10:02:08.788506",
+        "gwid": "1",
+        "id": 4,
+        "machine_no": "5",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy36",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-03-08 12:39:23",
+        "gwid": "1",
+        "id": 6,
+        "machine_no": "6",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy32",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-03-09 10:31:35",
+        "gwid": "1",
+        "id": 7,
+        "machine_no": "7",
+        "machine_status": "Active",
+        "password": "AMAN@8447",
+        "school_code": "sbsy28",
+        "ssid": "STANFORD SCHOOL 4G"
+    },
+    {
+        "created_on": "2021-03-09 10:53:12.592328",
+        "gwid": "1",
+        "id": 8,
+        "machine_no": "8",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy33",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-03-09 11:16:29.533051",
+        "gwid": "1",
+        "id": 9,
+        "machine_no": "9",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy31",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-03-09 11:32:07.778983",
+        "gwid": "6",
+        "id": 10,
+        "machine_no": "10",
+        "machine_status": "Active",
+        "password": "9255276804",
+        "school_code": "s003",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-03-11 07:50:15.459109",
+        "gwid": "1",
+        "id": 11,
+        "machine_no": "11",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy45",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-03-11 07:57:20.790842",
+        "gwid": "1",
+        "id": 12,
+        "machine_no": "12",
+        "machine_status": "Active",
+        "password": "mlzs9999",
+        "school_code": "sbsy37",
+        "ssid": "MLZS A"
+    },
+    {
+        "created_on": "2021-03-30 13:22:45",
+        "gwid": "2",
+        "id": 14,
+        "machine_no": "14",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy35",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-03-31 09:42:56.662513",
+        "gwid": "1",
+        "id": 15,
+        "machine_no": "15",
+        "machine_status": "Active",
+        "password": "12341234",
+        "school_code": "sbsy42",
+        "ssid": "OPPO A5s"
+    },
+    {
+        "created_on": "2021-03-31 09:48:09.239437",
+        "gwid": "1",
+        "id": 16,
+        "machine_no": "16",
+        "machine_status": "Active",
+        "password": "password",
+        "school_code": "sbsy43",
+        "ssid": "EASYTELNET"
+    },
+    {
+        "created_on": "2021-04-03 12:53:15",
+        "gwid": "2",
+        "id": 18,
+        "machine_no": "19",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy35",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-04-05 09:48:16.293034",
+        "gwid": "3",
+        "id": 19,
+        "machine_no": "1",
+        "machine_status": "inactive",
+        "password": "nm914460",
+        "school_code": "sbsy46",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-04-05 09:49:49.866998",
+        "gwid": "6",
+        "id": 20,
+        "machine_no": "4",
+        "machine_status": "inactive",
+        "password": "nm914460",
+        "school_code": "sbsy46",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-04-05 12:37:51.982573",
+        "gwid": "3",
+        "id": 21,
+        "machine_no": "18",
+        "machine_status": "Active",
+        "password": "D@lch@nd1975",
+        "school_code": "sbsy46",
+        "ssid": "Gyandeep"
+    },
+    {
+        "created_on": "2021-04-06 08:11:34.980857",
+        "gwid": "2",
+        "id": 22,
+        "machine_no": "13",
+        "machine_status": "Active",
+        "password": "khan.1010",
+        "school_code": "sbsy50",
+        "ssid": "Unus"
+    },
+    {
+        "created_on": "2021-04-06 11:27:46.067615",
+        "gwid": "1",
+        "id": 23,
+        "machine_no": "20",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy52",
+        "ssid": "sbsy"
+    },
+    {
+        "created_on": "2021-04-06 11:37:31",
+        "gwid": "2",
+        "id": 24,
+        "machine_no": "21",
+        "machine_status": "Active",
+        "password": "!Drkumar",
+        "school_code": "sbsy51",
+        "ssid": "iBall-Baton"
+    },
+    {
+        "created_on": "2021-04-07 04:45:14",
+        "gwid": "2",
+        "id": 25,
+        "machine_no": "22",
+        "machine_status": "Active",
+        "password": "nm914460",
+        "school_code": "sbsy35",
+        "ssid": "sbsy11"
+    },
+    {
+        "created_on": "2021-04-08 12:08:39.296670",
+        "gwid": "24",
+        "id": 26,
+        "machine_no": "24",
+        "machine_status": "Active",
+        "password": "bjks27h55t",
+        "school_code": "sbsy53",
+        "ssid": "JioFi3_3CC612"
+    },
+    {
+        "created_on": "2021-04-09 13:01:41.996570",
+        "gwid": "5",
+        "id": 27,
+        "machine_no": "25",
+        "machine_status": "Active",
+        "password": "password",
+        "school_code": "sbsy43",
+        "ssid": "EASYTELNET"
+    }
+]

@@ -1,0 +1,717 @@
+<html>
+    {%load static%}
+<head>
+
+    <style>
+        .card_bg {
+            width: 204px;
+            height: 321.5px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            /*border: 2px solid #06a3da;*/
+            position: relative;
+            float: left;
+            margin-left: 100px;
+        }
+
+        .card_content {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: 10000000;
+        }
+
+        .school_name {
+            width: 100%;
+            margin-top: 7px;
+        }
+
+        .school_heading {
+            padding: 2px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 18px;
+            text-align: center;
+            display: block;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            -webkit-print-color-adjust: exact;
+        }
+     .school_heading1 {
+            padding: 2px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            -webkit-print-color-adjust: exact;
+        }
+    .school_heading11 {
+            padding: 0px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 7px;
+            text-align: center;
+            display: block;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            -webkit-print-color-adjust: exact;
+        }
+        .school_sub_heading {
+            padding: 2px;
+            color: #ffffff;
+            font-size: 10px;
+            text-align: center;
+            display: block;
+            font-weight: bold;
+            -webkit-print-color-adjust: exact;
+        }
+
+    /*    .student_img {*/
+    /*       width: 77px;*/
+    /*height: 85px;*/
+    /*margin-top: 2px;*/
+    /*margin-left: 65px;*/
+    /*border: 1px solid #1c70ac;*/
+    /*    }*/
+        
+         .student_img {
+           width: 67px;
+    height: 85px;
+    margin-top: 4px;
+    margin-left: 11px;
+    border: 1px solid #1c70ac;
+        }
+
+        .student_type {
+            width: 100%;
+            text-align: center;
+            margin-top: 8px;
+            font-family: verdana;
+            font-weight: bolder;
+            font-size: 19px;
+            position: absolute;
+            right: -87px;
+            top: 158px;
+            color: #bdb9b9;
+            -webkit-print-color-adjust: exact;
+            transform: rotate(-90deg);
+        }
+
+        .student_name {
+                width: 100%;
+    margin-top: 2px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+      text-transform: uppercase;
+
+    color: white;
+			  -webkit-print-color-adjust: exact;
+.myclass {
+  display: inline-block;
+  width: 47%;
+  padding: 1%;
+}
+        }
+            .address {
+            font-size: 12px;
+            line-height: 9px;
+            margin-top: 3px;
+            
+            margin-left: 16px;
+            line-height: 12px;
+            /*white-space: nowrap;*/
+        }
+           .address1  {
+            font-size: 12px;
+            line-height: 9px;
+            margin-top: 3px;
+            margin-right: 16px;
+            line-height: 12px;
+
+                text-transform: lowercase;
+                text-transform: capitalize;
+            }
+
+
+
+        .student_detail {
+            font-size: 12px;
+            line-height: 5px;
+            margin-top: 3px;
+            margin-left: 16px;
+            line-height: 9px;
+            /*white-space: nowrap;*/
+        }
+
+            .student_detail tr td:first-child {
+                text-align: left;
+                padding-right: 3px;
+                /*white-space: nowrap;*/
+            }
+
+            .student_detail tr td:last-child {
+                text-align: left;
+                padding-left: 3px;
+                text-transform: lowercase;
+                text-transform: capitalize;
+                
+            }
+
+        .principal_text {
+            font-family: verdana;
+            font-size: 9px;
+            width: 97%;
+            text-align: right;
+            padding-right: 5px;
+            color: #071927;
+        }
+
+        .sign_img {
+            width: 30px;
+            margin-left: 11px;
+            padding-bottom:2px;
+        }
+
+
+
+
+        .sign_img11 {
+            width: 40px;
+            margin-left: 11px;
+            padding-bottom:2px;
+              padding-top: 10px;
+        }
+
+     
+        .logo_img1 {
+            width: 56px;
+            margin-left: 11px;
+            height:65px;
+                        margin-left: 25px;
+
+            
+            
+            
+            
+            /*"width: 56px;height: 65px;margin-left: 23px;margin-bottom:5px;*/
+        }
+
+        }
+
+        .footer_1 {
+            width: 100%;
+             padding-top: 5px;
+        }
+
+        .session {
+           padding: 2px;
+    padding-left: 30px;
+    padding-top: 5px;
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+        }
+
+        .sign_container {
+        float: right;
+    width: 23%;
+    right: 9px;
+    bottom: -30px;
+    position: absolute;
+    padding-right: 20px;
+}
+
+
+        .footer_2 {
+            color: white;
+            font-size: 11px;
+            width: 100%;
+            text-align: center;
+            /* background: red; */
+            float: left;
+            font-family: verdana;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .school_sub_heading_2 {
+            color: blue;
+            font-size: 7px;
+            padding-top: 8px;
+            display: block;
+            padding-left: 10px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+        
+        
+                .nowrap {
+  white-space: nowrap ;
+}
+
+.capital{
+  text-transform: uppercase;
+}
+   
+   .capitalize{
+  text-transform: capitalize;
+}
+   
+   
+    div.a {
+            text-indent: -54;
+            padding-left: 54;
+             padding-top: 4px;
+            
+            font-size: 10px;
+            
+             text-transform: capitalize;
+            
+            
+      font-size: 12px;
+            line-height: 9px;
+            margin-top: 0px;
+            margin-left: 17px;
+            line-height: 12px;
+            
+            
+        }
+        
+            div.b {
+            text-indent: -51;
+            padding-left: 51;
+             padding-top: 4px;
+             
+              text-transform: capitalize;
+            
+            font-size: 10px;
+            
+      font-size: 12px;
+            line-height: 9px;
+            margin-top: 0px;
+            margin-left: 17px;
+            line-height: 12px;
+            
+            
+        }
+        
+          div.c {
+            text-indent: -51;
+            padding-left: 51;
+             padding-top:4px;
+            font-size: 10px;
+            
+             text-transform: capitalize;
+      font-size: 12px;
+            line-height: 9px;
+            margin-top: 0px;
+            margin-left: 17px;
+            line-height: 12px;
+            
+            
+        }
+        
+            div.d {
+            text-indent: -51;
+            padding-left: 51;
+             padding-top: 4px;
+            font-size: 10px;
+             text-transform: capitalize;
+            padding-top: 6px;
+            
+      font-size: 12px;
+            line-height: 9px;
+            margin-top: 0px;
+            margin-left: 17px;
+            line-height: 12px;
+            
+            
+        }
+    </style>
+</head>
+ {% for i in data %}
+<body >
+    {% csrf_token %}
+    <div class="card_bg">
+        <!--<img src="Student_template_3.jpg" />-->
+        
+    <img src="{% static 'student_idcard5/PicsArt_01.png' %}" />
+
+        <div class="card_content">
+            <div class="school_name">
+              
+                                <span class="school_heading nowrap">{{school_info.school_name}} </span>
+                                <span class="school_heading11">&</span>
+                                 <span class="school_heading1 nowrap">Shenpride Global School</span>
+
+
+                <span class="school_sub_heading">Add:Huda Sec-2,near New Shona Road</span>
+                <span class="school_sub_heading">Ph: 8168904253,9811844364,9810164700</span>
+
+                <!--<span class="school_sub_heading">Vill. Baroli, Palwal(Hr.) M.9876543211 </span>-->
+                
+ <!--<span class="school_sub_heading">(Address- {{school_info.address}} {{school_info.city}} {{school_info.pincode}})</span>-->
+            <!--<span class="school_sub_heading">  {{school_info.address}} ({{school_info.city}})</span>-->
+
+                <!--<span class="school_sub_heading">(Affilated to {{school_info.affiliated_by}})</span>-->
+
+                <!--<span class="school_sub_heading">(Affilated to {{school_info.affiliated_by}},School Code:{{school_info.registration_number}})</span>-->
+            </div>
+           
+            <div class="midSection" style="height: 95px;">
+                <div class="school_logo" style="width:50%; float:left;height: 95px;">
+                    <div class="session">2021-22</div>
+                    <!--<img class="school_logo" src="school_logo.png" style="width: 56px;height: 65px;margin-left: 23px;margin-bottom:5px;" />-->
+                    <img class="logo_img1" src="/media/{{school_info.logo_of_school}}"  />  
+                   
+                </div>
+                <div style="width:50%; float:right;">
+                    <!--<img class="student_img" src="student.jpg" />-->
+                    <img class="student_img" src="/media/{{i.image}}">
+
+                </div>
+                
+               
+                
+            </div>
+
+            <div class="student_name"> {{i.Full_name}}</div>
+            <!--<table class="student_detail">-->
+            <!--    <tr>-->
+            <!--        <td>Father Name</td>-->
+            <!--        <td>:&nbsp;Meghraj</td>-->
+            <!--    </tr>-->
+            <!--    <tr>-->
+            <!--        <td>D.O.B:</td>-->
+            <!--        <td>:&nbsp;03-Feb-1987</td>-->
+            <!--    </tr>-->
+            <!--    <tr>-->
+            <!--        <td>Adm. No:</td>-->
+            <!--        <td>:&nbsp;2230</td>-->
+            <!--    </tr>-->
+            <!--    <tr>-->
+            <!--        <td>Class & Sec:</td>-->
+            <!--        <td>:&nbsp; 5-A</td>-->
+            <!--    </tr>-->
+            <!--    <tr>-->
+            <!--        <td>Mobile:</td>-->
+            <!--        <td>:&nbsp;9050725826</td>-->
+            <!--    </tr>-->
+            <!--    <tr>-->
+            <!--        <td>Address:</td>-->
+            <!--        <td>:&nbsp;BAROLI</td>-->
+            <!--    </tr>-->
+            <!--</table>-->
+            
+            <!--<table class="student_detail">-->
+            
+                <!--<tr>-->
+                <!--    <td>D.O.B</td>-->
+                <!--    <td>:&nbsp;{{i.date_of_birth}}</td>-->
+                <!--</tr>-->
+            
+                <!--<tr>-->
+                <!--    <td>Class</td>-->
+                <!--    <td >&nbsp;{{i.class_name}}-{{i.division_name}}</td>-->
+                <!--</tr>-->
+                
+                <!--  <tr>-->
+                <!--    <td>Ph.No</td>-->
+                <!--    <td>&nbsp;{{i.Parents_mobile}}</td>-->
+                <!--</tr>-->
+                
+            <!--     <tr>-->
+            <!--         <td>Address</td>-->
+            <!--        <td>-->
+                         
+            <!--{{i.Parents_Address}}-->
+
+            <!--        </td>-->
+            <!--        <td>&nbsp;-->
+   
+            
+                    
+            <!--        </td>-->
+            <!--    </tr>-->
+                
+                <!--</table>-->
+                <!--<p class="address ">Address</p>-->
+                <!--<p class="address ">{{i.Parents_Address}}</p>-->
+
+ 
+            
+                
+            <div class="footer_1">
+
+                <div class="sign_container">
+                    <img class="sign_img11" src="/media/{{school_info.principal_sign_image}}">
+                     <div class="principal_text">Principal</div>
+                     
+                      <!--<div class="principal_text">2021-2022</div>-->
+                </div>
+                
+            </div>
+
+
+ <div class="d">
+        <span>
+            F.Name &nbsp;:&nbsp;&nbsp;{{i.fathername}}
+        </span>
+    </div> 
+
+    
+ <div class="c">
+        <span>
+            Class &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;{{i.class_name}}
+        </span>
+    </div>   
+
+<div class="b">
+        <span>
+            Ph.No &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;{{i.Parents_mobile}}
+        </span>
+    </div>
+
+<div class="a">
+        <span>
+            Address &nbsp;:&nbsp;&nbsp;{{i.Parents_Address}}
+        </span>
+    </div>
+    
+    
+
+        </div>
+    </div>
+    
+    
+   
+
+    <!--<div class="card_bg">-->
+    <!--    <img src="Student_template_3.jpg" />-->
+    <!--    <div class="card_content">-->
+    <!--        <div class="school_name">-->
+    <!--            <span class="school_heading">R.S. MEMORIAL SCHOOL</span>-->
+    <!--            <span class="school_sub_heading">Vill. Baroli, Palwal(Hr.) M.9876543211 </span>-->
+    <!--        </div>-->
+
+    <!--        <div class="midSection" style="height: 95px;">-->
+    <!--            <div class="school_logo" style="width:50%; float:left;height: 95px;">-->
+    <!--                <div class="session">2021-22</div>-->
+    <!--                <img class="school_logo" src="school_logo.png" style="width: 56px;height: 65px;margin-left: 23px;margin-bottom:5px;" />-->
+
+    <!--            </div>-->
+    <!--            <div style="width:50%; float:right;"><img class="student_img" src="student.jpg" /></div>-->
+    <!--        </div>-->
+
+    <!--        <div class="student_name">HITESH KUMAR</div>-->
+    <!--        <table class="student_detail">-->
+    <!--            <tr>-->
+    <!--                <td>Father Name</td>-->
+    <!--                <td>:&nbsp;Meghraj</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>D.O.B:</td>-->
+    <!--                <td>:&nbsp;03-Feb-1987</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Adm. No:</td>-->
+    <!--                <td>:&nbsp;2230</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Class & Sec:</td>-->
+    <!--                <td>:&nbsp; 5-A</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Mobile:</td>-->
+    <!--                <td>:&nbsp;9050725826</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Address:</td>-->
+    <!--                <td>:&nbsp;BAROLI</td>-->
+    <!--            </tr>-->
+    <!--        </table>-->
+
+    <!--        <div class="footer_1">-->
+
+    <!--            <div class="sign_container">-->
+    <!--                <img class="sign_img" src="p_sign.png" />-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+
+    <!--    </div>-->
+    <!--</div>-->
+
+    <!--<div class="card_bg">-->
+    <!--    <img src="Student_template_3.jpg" />-->
+    <!--    <div class="card_content">-->
+    <!--        <div class="school_name">-->
+    <!--            <span class="school_heading">R.S. MEMORIAL SCHOOL</span>-->
+    <!--            <span class="school_sub_heading">Vill. Baroli, Palwal(Hr.) M.9876543211 </span>-->
+    <!--        </div>-->
+
+    <!--        <div class="midSection" style="height: 95px;">-->
+    <!--            <div class="school_logo" style="width:50%; float:left;height: 95px;">-->
+    <!--                <div class="session">2021-22</div>-->
+    <!--                <img class="school_logo" src="school_logo.png" style="width: 56px;height: 65px;margin-left: 23px;margin-bottom:5px;" />-->
+
+    <!--            </div>-->
+    <!--            <div style="width:50%; float:right;"><img class="student_img" src="student.jpg" /></div>-->
+    <!--        </div>-->
+
+    <!--        <div class="student_name">HITESH KUMAR</div>-->
+    <!--        <table class="student_detail">-->
+    <!--            <tr>-->
+    <!--                <td>Father Name</td>-->
+    <!--                <td>:&nbsp;Meghraj</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>D.O.B:</td>-->
+    <!--                <td>:&nbsp;03-Feb-1987</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Adm. No:</td>-->
+    <!--                <td>:&nbsp;2230</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Class & Sec:</td>-->
+    <!--                <td>:&nbsp; 5-A</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Mobile:</td>-->
+    <!--                <td>:&nbsp;9050725826</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Address:</td>-->
+    <!--                <td>:&nbsp;BAROLI</td>-->
+    <!--            </tr>-->
+    <!--        </table>-->
+
+    <!--        <div class="footer_1">-->
+
+    <!--            <div class="sign_container">-->
+    <!--                <img class="sign_img" src="p_sign.png" />-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+
+    <!--    </div>-->
+    <!--</div>-->
+
+    <!--<div class="card_bg">-->
+    <!--    <img src="Student_template_3.jpg" />-->
+    <!--    <div class="card_content">-->
+    <!--        <div class="school_name">-->
+    <!--            <span class="school_heading">R.S. MEMORIAL SCHOOL</span>-->
+    <!--            <span class="school_sub_heading">Vill. Baroli, Palwal(Hr.) M.9876543211 </span>-->
+    <!--        </div>-->
+
+    <!--        <div class="midSection" style="height: 95px;">-->
+    <!--            <div class="school_logo" style="width:50%; float:left;height: 95px;">-->
+    <!--                <div class="session">2021-22</div>-->
+    <!--                <img class="school_logo" src="school_logo.png" style="width: 56px;height: 65px;margin-left: 23px;margin-bottom:5px;" />-->
+
+    <!--            </div>-->
+    <!--            <div style="width:50%; float:right;"><img class="student_img" src="student.jpg" /></div>-->
+    <!--        </div>-->
+
+    <!--        <div class="student_name">HITESH KUMAR</div>-->
+    <!--        <table class="student_detail">-->
+    <!--            <tr>-->
+    <!--                <td>Father Name</td>-->
+    <!--                <td>:&nbsp;Meghraj</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>D.O.B:</td>-->
+    <!--                <td>:&nbsp;03-Feb-1987</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Adm. No:</td>-->
+    <!--                <td>:&nbsp;2230</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Class & Sec:</td>-->
+    <!--                <td>:&nbsp; 5-A</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Mobile:</td>-->
+    <!--                <td>:&nbsp;9050725826</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Address:</td>-->
+    <!--                <td>:&nbsp;BAROLI</td>-->
+    <!--            </tr>-->
+    <!--        </table>-->
+
+    <!--        <div class="footer_1">-->
+
+    <!--            <div class="sign_container">-->
+    <!--                <img class="sign_img" src="p_sign.png" />-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+
+    <!--    </div>-->
+    <!--</div>-->
+
+    <!--<div class="card_bg">-->
+    <!--    <img src="Student_template_3.jpg" />-->
+    <!--    <div class="card_content">-->
+    <!--        <div class="school_name">-->
+    <!--            <span class="school_heading">R.S. MEMORIAL SCHOOL</span>-->
+    <!--            <span class="school_sub_heading">Vill. Baroli, Palwal(Hr.) M.9876543211 </span>-->
+    <!--        </div>-->
+
+    <!--        <div class="midSection" style="height: 95px;">-->
+    <!--            <div class="school_logo" style="width:50%; float:left;height: 95px;">-->
+    <!--                <div class="session">2021-22</div>-->
+    <!--                <img class="school_logo" src="school_logo.png" style="width: 56px;height: 65px;margin-left: 23px;margin-bottom:5px;" />-->
+
+    <!--            </div>-->
+    <!--            <div style="width:50%; float:right;"><img class="student_img" src="student.jpg" /></div>-->
+    <!--        </div>-->
+
+    <!--        <div class="student_name">HITESH KUMAR</div>-->
+    <!--        <table class="student_detail">-->
+    <!--            <tr>-->
+    <!--                <td>Father Name</td>-->
+    <!--                <td>:&nbsp;Meghraj</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>D.O.B:</td>-->
+    <!--                <td>:&nbsp;03-Feb-1987</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Adm. No:</td>-->
+    <!--                <td>:&nbsp;2230</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Class & Sec:</td>-->
+    <!--                <td>:&nbsp; 5-A</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Mobile:</td>-->
+    <!--                <td>:&nbsp;9050725826</td>-->
+    <!--            </tr>-->
+    <!--            <tr>-->
+    <!--                <td>Address:</td>-->
+    <!--                <td>:&nbsp;BAROLI</td>-->
+    <!--            </tr>-->
+    <!--        </table>-->
+
+    <!--        <div class="footer_1">-->
+
+    <!--            <div class="sign_container">-->
+    <!--                <img class="sign_img" src="p_sign.png" />-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+
+    <!--    </div>-->
+    <!--</div>-->
+</body>
+{% endfor %}
+</html>
