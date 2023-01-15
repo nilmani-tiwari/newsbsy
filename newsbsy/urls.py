@@ -52,6 +52,7 @@ urlpatterns = [
     path('Busapi/', include(router5.urls)),
     path('', include('school.urls')),
     path('', include('core.urls')),
+    path('lybrary/', include('lybrary.urls')),
     
 
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
