@@ -23,6 +23,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import  routers
 from school import views
+# from lybrary import views
+from django.conf.urls import handler404, handler500
 
 router=routers.DefaultRouter()
 router.register('',views.attendanceCRUDCBV)
@@ -57,7 +59,9 @@ urlpatterns = [
 
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
-
+handler404 = 'lybrary.views.error_404'
+handler500 = 'lybrary.views.error_500'
+# handler503 = 'lybrary.views.error_503'
 
 
 

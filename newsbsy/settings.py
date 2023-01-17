@@ -38,7 +38,7 @@ SECRET_KEY = 'qj8may(ldb_&zu$ne6t4%(!(u4xia*a+%ud4%+s@*&+ywl+)6c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-DEBUG = True
+# DEBUG = True
 # ALLOWED_HOSTS = ["*","sbsy.co.in","www.sbsy.co.in","103.129.97.81"]
 ALLOWED_HOSTS = ['*', 'sbsy.co.in','www.sbsy.co.in',"103.129.97.81"]
 

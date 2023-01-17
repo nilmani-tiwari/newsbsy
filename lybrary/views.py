@@ -43,7 +43,49 @@ class ListUsers(APIView):
             result[key]=value
 
         # data={"code":request.get("lybrary_code","date":request.get("date"))}
-        return JsonResponse(data=result,safe=False)
+        return JsonResponse(data={"status":True,"result":result},safe=False)
+
+
+
+
+
+
+def error_404(request,  *args, **kwargs):
+    context={}
+  
+    return render(request,'error/404.html', context)
+
+def error_500(request,  *args, **kwargs):
+    context={}
+
+    return render(request,'error/500.html', context)
+
+# def error_503(request,  *args, **kwargs):
+#     context={}
+#     data={"test":"503"}
+#     context.update(data)
+#     urll=request.build_absolute_uri()
+#     pth=urll.split("login_user/?next=")
+#     url=pth[-1]
+#     context.update({"url":url})
+#     data=ErrorRecord(error="503",url=url)
+#     data.save()
+#     return render(request,'500.html', context)
+
+
+# def error_504(request,  *args, **kwargs):
+#     context={}
+#     data={"test":"504"}
+#     context.update(data)
+#     urll=request.build_absolute_uri()
+#     pth=urll.split("login_user/?next=")
+#     url=pth[-1]
+#     context.update({"url":url})
+#     data=ErrorRecord(error="504",url=url)
+#     data.save()
+#     return render(request,'500.html', context)
+
+
 
 
 

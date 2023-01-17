@@ -11,5 +11,5 @@ admin.site.register(Library)
 @admin.register(LibraryStudents)
 class LibraryStudentsAdmin(admin.ModelAdmin):
     list_display = ['user','library_code','user_name', 'student_card_number', 'status','access_expiry_date']
-    list_editable = ['user','library_code','user_name', 'student_card_number', 'status','access_expiry_date']
+    list_editable = ['library_code','user_name', 'student_card_number', 'status','access_expiry_date']
 
