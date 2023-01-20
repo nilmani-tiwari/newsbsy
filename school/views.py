@@ -16,6 +16,9 @@ import datetime
 from json import dumps
 import json
 import requests
+import logging
+log_handle = logging.getLogger(__name__)
+log_handle.info('Created Candidate Account')
 
 @unauthenticated_user
 def loginPage(request):
@@ -494,9 +497,9 @@ def admit_form(request):
 
         elif ParentsMaster.objects.filter(Parents_mobile=parents_mobile).exists():# parents exists in another school
             print("***************  parents exist in another achool *********************************")
-            Parents_school_code=ParentsMaster.objects.filter(Parents_mobile=parents_mobile).first().Parents_school_code
-            school_name=SchoolMaster.objects.filter(school_code=Parents_school_code).first().school_name
-            messages.info(request, "Warning:parents mobile already exists!!!!!!! in {} please provide another number.".format(school_name))
+        #     Parents_school_code=ParentsMaster.objects.filter(Parents_mobile=parents_mobile).first().Parents_school_code
+        #     school_name=SchoolMaster.objects.filter(school_code=Parents_school_code).first().school_name
+            messages.info(request, "Warning:parents mobile already exists!!!!!!! please provide another number")
             student_id=1
             return redirect(f'/admit_form/')
         else:

@@ -1,0 +1,127 @@
+2023-01-20 21:58:44,807 [INFO] school.views: Created Candidate Account
+2023-01-20 22:08:03,452 [INFO] school.views: Created Candidate Account
+2023-01-20 22:08:53,416 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-20 22:11:07,396 [INFO] django.request: OK: /admit_form/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 501, in admit_form
+    school_name=SchoolMaster.objects.filter(school_code=Parents_school_code).first().school_name
+AttributeError: 'NoneType' object has no attribute 'school_name'
+2023-01-20 22:14:20,138 [INFO] school.views: Created Candidate Account
+2023-01-20 22:16:14,066 [INFO] django.request: OK: /admit_form/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 501, in admit_form
+    school_name=SchoolMaster.objects.filter(school_code=Parents_school_code).first().school_name
+AttributeError: 'NoneType' object has no attribute 'school_name'
+2023-01-20 22:18:52,122 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-20 22:40:38,004 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:41:21,733 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:41:22,227 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:41:25,396 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:41:25,904 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:41:41,249 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:41:41,760 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:41:59,127 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:41:59,634 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:42:01,801 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:42:02,364 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:44:44,727 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:44:45,473 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:44:45,667 [INFO] school.views: Created Candidate Account
+2023-01-20 22:45:23,879 [INFO] school.views: Created Candidate Account
+2023-01-20 22:45:56,427 [INFO] django.request: OK: /admit_form/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/query.py", line 929, in get_or_create
+    return self.get(**kwargs), False
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 507, in admit_form
+    user, created = User.objects.get_or_create(username=parents_mobile, is_staff=1, is_active=1, first_name=fathername,
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/query.py", line 936, in get_or_create
+    return self.create(**params), True
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+2023-01-20 22:48:41,998 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:48:42,571 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:51:42,980 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:51:43,515 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:51:43,672 [INFO] school.views: Created Candidate Account
+2023-01-20 22:51:59,313 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:51:59,838 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:51:59,991 [INFO] school.views: Created Candidate Account
+2023-01-20 22:52:03,448 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:52:03,976 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:52:04,133 [INFO] school.views: Created Candidate Account
+2023-01-20 22:52:08,535 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:52:09,058 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:52:09,219 [INFO] school.views: Created Candidate Account
+2023-01-20 22:52:11,600 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:52:12,158 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:52:12,312 [INFO] school.views: Created Candidate Account
+2023-01-20 22:52:20,765 [INFO] django.utils.autoreload: /var/www/html/project/venv/newsbsy/school/views.py changed, reloading.
+2023-01-20 22:52:21,285 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-01-20 22:52:21,438 [INFO] school.views: Created Candidate Account
+2023-01-20 22:52:46,446 [INFO] school.views: Created Candidate Account
+2023-01-20 22:53:16,533 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
