@@ -125,3 +125,882 @@ django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
 2023-01-20 22:52:21,438 [INFO] school.views: Created Candidate Account
 2023-01-20 22:52:46,446 [INFO] school.views: Created Candidate Account
 2023-01-20 22:53:16,533 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-20 23:59:06,633 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 00:43:53,092 [INFO] school.views: Created Candidate Account
+2023-01-21 00:45:43,346 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /admit_form/
+2023-01-21 01:38:16,693 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 02:44:45,617 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 03:13:03,874 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 03:32:03,546 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 04:24:41,424 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 06:14:56,777 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 06:15:49,075 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 06:36:51,402 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 07:14:35,582 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 08:27:10,624 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 09:08:25,794 [INFO] school.views: Created Candidate Account
+2023-01-21 09:13:13,596 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 09:24:31,449 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 11:20:06,151 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 11:53:22,349 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 13:37:55,636 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 13:49:51,067 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 14:50:46,226 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 16:01:58,643 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 16:21:09,530 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 17:38:15,967 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 18:28:27,096 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 18:55:39,383 [INFO] django.request: OK: /attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 833, in attendence
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-01-21 18:55:44,389 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-01-21 18:59:26,331 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 19:41:26,130 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 20:45:59,173 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 21:31:02,476 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 22:25:01,095 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 22:56:05,148 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-21 23:50:58,485 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 00:17:37,854 [INFO] school.views: Created Candidate Account
+2023-01-22 00:17:38,120 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 00:55:23,284 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 01:01:22,408 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 02:42:06,301 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 03:40:11,949 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 04:22:37,392 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 05:25:16,721 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 07:52:35,624 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 07:52:39,399 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 09:05:35,128 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 09:21:03,611 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 09:44:34,366 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 10:34:05,111 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 11:06:12,041 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /admit_form/
+2023-01-22 11:16:27,616 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /admit_form/
+2023-01-22 11:16:55,436 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /absent_Student/
+2023-01-22 11:17:49,157 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /notice_board/
+2023-01-22 11:18:10,866 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /login/
+2023-01-22 11:18:21,271 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /login/
+2023-01-22 11:18:26,092 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /login/
+2023-01-22 11:37:25,502 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 12:29:01,874 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 12:50:44,290 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 13:16:55,396 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 13:54:17,613 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 15:01:26,004 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 15:17:14,850 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 15:40:12,065 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 16:13:03,647 [WARNING] django.request: Bad Request: /sbsydatapi/
+2023-01-22 16:32:46,557 [WARNING] django.security.csrf: Forbidden (CSRF token from POST incorrect.): /login/
+2023-01-22 17:17:13,093 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 17:18:08,418 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:18:39,176 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:19:06,780 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:19:16,159 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:19:56,158 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:20:06,998 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:20:15,386 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:20:48,044 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:21:14,915 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:21:55,213 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:22:44,378 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:30:12,214 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:30:26,123 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:32:05,503 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:32:25,120 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 17:33:24,889 [INFO] django.request: OK: /admin/school/studentmaster/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 2023, in changelist_view
+    self.save_model(request, obj, form, change=True)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1225, in save_model
+    obj.save()
+  File "/var/www/html/project/venv/newsbsy/school/models.py", line 133, in save
+    imageTemproary = Image.open(self.image)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/PIL/Image.py", line 3135, in open
+    fp.seek(0)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/utils.py", line 46, in <lambda>
+    seek = property(lambda self: self.file.seek)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 47, in _get_file
+    self._file = self.storage.open(self.name, "rb")
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 40, in open
+    return self._open(name, mode)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 276, in _open
+    return File(open(self.path(name), mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/var/www/html/project/venv/newsbsy/media/images/IMG-20210303-WA0051_TYzqjtC.jpg'
+2023-01-22 18:59:34,909 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 19:33:49,640 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 20:14:55,583 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 20:16:44,924 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 20:41:32,173 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 21:33:10,969 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 22:22:14,682 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 23:31:40,427 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-22 23:57:39,311 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 00:03:30,309 [INFO] school.views: Created Candidate Account
+2023-01-23 00:56:33,267 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 03:08:01,070 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 03:18:45,213 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 04:43:43,287 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 05:44:20,884 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 06:14:31,143 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 06:30:16,889 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 08:21:54,442 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 08:59:41,358 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 10:06:56,882 [WARNING] django.security.csrf: Forbidden (CSRF token from POST incorrect.): /admin/school/studentmaster/
+2023-01-23 10:10:45,002 [WARNING] django.request: Forbidden (Permission denied): /admin/lybrary/librarystudents/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1928, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+2023-01-23 10:18:03,758 [WARNING] django.security.csrf: Forbidden (CSRF token from POST incorrect.): /login/
+2023-01-23 10:21:41,137 [WARNING] django.security.csrf: Forbidden (CSRF token from POST incorrect.): /login/
+2023-01-23 10:35:10,942 [INFO] django.request: OK: /owner_details_update/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 338, in owner_details_update
+    user_name = request.POST.get('username').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2023-01-23 10:35:31,403 [INFO] django.request: OK: /owner_details_update/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 338, in owner_details_update
+    user_name = request.POST.get('username').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2023-01-23 10:38:20,033 [INFO] django.request: OK: /owner_details_update/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 338, in owner_details_update
+    user_name = request.POST.get('username').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2023-01-23 10:40:41,704 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 11:34:04,767 [INFO] django.request: OK: /owner_details_update/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 338, in owner_details_update
+    user_name = request.POST.get('username').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2023-01-23 12:18:14,842 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 12:25:28,879 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 12:25:29,817 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 12:25:30,754 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 13:46:13,706 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 15:17:34,582 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 15:22:45,639 [WARNING] django.security.csrf: Forbidden (CSRF token from POST incorrect.): /login/
+2023-01-23 15:28:58,092 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 17:45:44,176 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 18:08:53,505 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 19:40:05,458 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-01-23 19:47:48,457 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 20:01:15,196 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 21:12:30,576 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 21:28:56,456 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 22:14:45,827 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 22:32:30,394 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-23 23:49:24,335 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 00:01:26,079 [INFO] school.views: Created Candidate Account
+2023-01-24 01:13:07,748 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 02:03:41,198 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 02:13:05,723 [INFO] django.request: OK: /owner_details_update/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 338, in owner_details_update
+    user_name = request.POST.get('username').strip()
+AttributeError: 'NoneType' object has no attribute 'strip'
+2023-01-24 03:10:33,129 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 03:45:27,354 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 04:44:29,141 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 05:02:13,551 [WARNING] django.request: Bad Request: /school_machine_api/
+2023-01-24 05:13:18,678 [INFO] django.request: OK: /school_data_update/b'b\'b\\\'b"b\\\\\\\'9\\\\\\\'"\\\'\''
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 3063, in school_data_update
+    return render(request,file , {"data": data})
+UnboundLocalError: local variable 'file' referenced before assignment
+2023-01-24 05:13:21,562 [WARNING] django.request: Bad Request: /school_machine_api/
+2023-01-24 05:24:35,364 [INFO] django.request: OK: /school_data_update/b'b\'b\\\'b"b\\\\\\\'9\\\\\\\'"\\\'\''
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 3063, in school_data_update
+    return render(request,file , {"data": data})
+UnboundLocalError: local variable 'file' referenced before assignment
+2023-01-24 05:24:37,735 [WARNING] django.request: Bad Request: /school_machine_api/
+2023-01-24 05:25:25,828 [INFO] django.request: OK: /school_data_update/b'b\'b\\\'b"b\\\\\\\'9\\\\\\\'"\\\'\''
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 3063, in school_data_update
+    return render(request,file , {"data": data})
+UnboundLocalError: local variable 'file' referenced before assignment
+2023-01-24 05:25:28,517 [WARNING] django.request: Bad Request: /school_machine_api/
+2023-01-24 05:28:02,922 [INFO] django.request: OK: /school_data_update/b'b\'b\\\'b"b\\\\\\\'9\\\\\\\'"\\\'\''
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 3063, in school_data_update
+    return render(request,file , {"data": data})
+UnboundLocalError: local variable 'file' referenced before assignment
+2023-01-24 05:28:05,604 [WARNING] django.request: Bad Request: /school_machine_api/
+2023-01-24 05:28:44,500 [INFO] django.request: OK: /school_data_update/b'b\'b\\\'b"b\\\\\\\'9\\\\\\\'"\\\'\''
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 3063, in school_data_update
+    return render(request,file , {"data": data})
+UnboundLocalError: local variable 'file' referenced before assignment
+2023-01-24 05:28:47,179 [WARNING] django.request: Bad Request: /school_machine_api/
+2023-01-24 06:04:47,593 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 06:10:03,024 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 06:32:06,943 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 07:22:24,617 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 08:24:51,686 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 10:06:10,855 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 10:52:32,635 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 11:41:20,013 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-01-24 11:41:21,291 [INFO] django.request: OK: /attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 833, in attendence
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-01-24 11:48:01,492 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 12:00:23,315 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 13:08:20,356 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 13:23:17,145 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-01-24 13:30:25,581 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 14:35:33,687 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 14:36:52,007 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 14:55:38,816 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 16:26:34,148 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-01-24 17:12:59,310 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
