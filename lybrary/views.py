@@ -14,10 +14,10 @@ class ListUsers(APIView):
     permission_classes = [AllowAny]
     def get(self, request, format=None):
      
-        # usernames = LibraryStudents.objects.all()
+        # usernames = LybraryStudents.objects.all()
 
         # return Response(usernames)
-        data = LibraryStudents.objects.values("student_card_number","user_name")
+        data = LybraryStudents.objects.values("student_card_number","user_name")
         result={}
         for i in data:
             key= i['student_card_number']
@@ -30,12 +30,12 @@ class ListUsers(APIView):
         lybrary_code=request.data.get("lybrary_code")
         date=request.data.get("date")
      
-        # usernames = LibraryStudents.objects.all()
+        # usernames = LybraryStudents.objects.all()
 
         # return Response(usernames)
         #mydata = Member.objects.filter(firstname='Emil').values()
         
-        data = LibraryStudents.objects.filter(library_code=lybrary_code).values("student_card_number","user_name")
+        data = LybraryStudents.objects.filter(lybrary_code=lybrary_code).values("student_card_number","user_name")
         result={}
         for i in data:
             key= i['student_card_number']

@@ -45,7 +45,7 @@ router5=routers.DefaultRouter()
 router5.register('',views.BusapiCRUDCBV)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('sbsydatapi/', include(router.urls)),
     path('gpsrestapi/', include(router1.urls)),
     path('Bikeapi/', include(router2.urls)),

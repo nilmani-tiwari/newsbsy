@@ -41,7 +41,7 @@ SECRET_KEY = 'qj8may(ldb_&zu$ne6t4%(!(u4xia*a+%ud4%+s@*&+ywl+)6c'
 DEBUG = False
 # DEBUG = True
 # ALLOWED_HOSTS = ["*","sbsy.co.in","www.sbsy.co.in","103.129.97.81"]
-ALLOWED_HOSTS = ['*', 'sbsy.co.in','www.sbsy.co.in',"103.129.97.81"]
+ALLOWED_HOSTS = ['*', 'sbsy.co.in','www.sbsy.co.in',"103.129.97.81","http://localhost/","http://sbsy.co.in:8000/"]
 
 
 # Application definition
@@ -57,6 +57,8 @@ ALLOWED_HOSTS = ['*', 'sbsy.co.in','www.sbsy.co.in',"103.129.97.81"]
 
 
 INSTALLED_APPS = [
+    #  'adminlte3',
+    #   'adminlte3_theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -70,6 +72,7 @@ INSTALLED_APPS = [
       'online_users',
       'social_django', # add this social
       'core', # add this
+     
 ]
 
 
@@ -277,16 +280,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 
-
-
-
-
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_ROOT=os.path.join(BASE_DIR,"/static/")                # comment STATICFILES_DIRS and uncomment STATIC_ROOT for python manage.py collectstatic
 
 if not DEBUG:
     EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
