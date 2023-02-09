@@ -9,6 +9,7 @@ from rest_framework import authentication, permissions
 from rest_framework.permissions import AllowAny
 from django.contrib.auth.models import User
 from django.http import JsonResponse
+from django.views.generic import TemplateView
 
 class ListUsers(APIView):
     permission_classes = [AllowAny]
@@ -84,6 +85,15 @@ def error_500(request,  *args, **kwargs):
 #     data=ErrorRecord(error="504",url=url)
 #     data.save()
 #     return render(request,'500.html', context)
+
+
+class Index(TemplateView):
+    template_name = "lybrary/home.html"
+
+    def get(self, request):
+        contex={}
+
+        return render(request, self.template_name, contex)
 
 
 

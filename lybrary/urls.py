@@ -24,7 +24,8 @@ urlpatterns = [
 #    path('student/', views.student, name='student'),
 #     path('sachin/', views.sachin, name='sachin'),
 #     path('parents/', views.parents, name='parents'),
-    path('students/', ListUsers.as_view(), name='lybrary_students')
+    path('students/', ListUsers.as_view(), name='lybrary_students'),
+    path('home/', Index.as_view(), name='lybrary_home')
    
 
 ]

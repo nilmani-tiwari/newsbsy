@@ -185,6 +185,56 @@ DATABASES = {
 # DATABASES = {
 #   'default': {
 #       'ENGINE': 'django.db.backends.mysql', 
+#     #   'NAME': 'sbsy-india',
+#       'USER': 'admin',
+#       'PASSWORD': 'admin#2023',
+#       'HOST': 'sbsy-india.ctc9p0shknta.us-east-1.rds.amazonaws.com',   # Or an IP Address that your 103.129.97.81 DB is hosted on157.37.136.25    103.129.97.229  sbsy.co.in
+#       'PORT': 3306,
+      
+#     'CONN_MAX_AGE':120,
+#         'OPTIONS' : {
+#                 'charset': 'utf8mb4',
+#                  # This sets the default storage engine upon connecting to the database.
+#                  # This should be removed after tables are created as it adds a query
+#                  # that is only needed during table creation to each database connection.
+#                 'init_command': 'SET default_storage_engine=INNODB',
+#                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#                 'isolation_level': 'read committed'
+#         },
+#   }
+# }
+
+
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': env("DB_NAME"),
+#         'HOST': env('DB_HOST'),
+#         'PORT': env('DB_PORT'),
+#         'USER': env('DB_USER'),
+#         'PASSWORD': env('DB_PASS'),
+#         # Time in seconds after which DB connection is refreshed.
+#         # Default is 0, i.e. connection refreshed after every request is completed
+#         # Setting to be fine tuned with real load
+#         'CONN_MAX_AGE':120,
+#         'OPTIONS' : {
+#                 'charset': 'utf8mb4',
+#                  # This sets the default storage engine upon connecting to the database.
+#                  # This should be removed after tables are created as it adds a query
+#                  # that is only needed during table creation to each database connection.
+#                 'init_command': 'SET default_storage_engine=INNODB',
+#                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#                 'isolation_level': 'read committed'
+#         },
+#     }
+# }
+
+# DATABASES = {
+#   'default': {
+#       'ENGINE': 'django.db.backends.mysql', 
 #       'NAME': 'sbsycoin_newschool',
 #       'USER': 'sbsycoin_nilmani',
 #       'PASSWORD': 'Nilmani@nilmani',
