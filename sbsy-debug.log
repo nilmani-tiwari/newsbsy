@@ -8133,3 +8133,175 @@ django.db.utils.OperationalError: (1046, 'No database selected')
 2023-02-09 17:51:14,580 [INFO] school.views: Created Candidate Account
 2023-02-09 17:53:38,396 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
 2023-02-09 19:02:48,288 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-09 19:15:46,457 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-09 20:26:22,335 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-09 21:37:11,936 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-09 21:41:55,964 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-09 22:03:13,825 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-09 22:18:14,925 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-09 22:56:58,949 [INFO] django.request: OK: /attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 833, in attendence
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-09 23:24:08,333 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 00:10:31,448 [INFO] school.views: Created Candidate Account
+2023-02-10 01:05:13,552 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 01:32:47,737 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 03:36:08,340 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-10 03:39:33,224 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 05:05:11,331 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 05:14:33,554 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 07:30:30,627 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 07:44:53,971 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 07:59:34,130 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 08:55:48,584 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 09:02:15,603 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 09:39:51,134 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-10 10:19:50,971 [INFO] django.request: OK: /attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 833, in attendence
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-10 11:24:12,156 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 12:29:14,357 [INFO] django.request: OK: /attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 833, in attendence
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-10 12:29:36,689 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 12:56:25,920 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 12:57:59,747 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 14:18:36,479 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 14:19:20,271 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 14:26:13,411 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 14:43:52,052 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 15:46:09,267 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 16:21:56,157 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 17:22:32,041 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 17:37:15,005 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 17:52:21,877 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 19:21:34,108 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 19:23:02,804 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 20:50:42,883 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 22:22:57,262 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 22:30:18,726 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 22:55:39,931 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-10 23:41:54,861 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 00:32:23,362 [INFO] school.views: Created Candidate Account
+2023-02-11 00:35:24,634 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 02:46:56,868 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 03:08:48,222 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 04:27:07,884 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 06:16:20,898 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 06:32:27,619 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 07:20:33,908 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 07:54:31,238 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 08:13:56,382 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 08:56:31,223 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 09:08:24,121 [INFO] django.request: OK: /manual_attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 2269, in manual_atten_all
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-11 09:53:44,221 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 10:20:26,190 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 11:36:26,703 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 11:46:32,393 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 11:58:36,466 [INFO] django.request: OK: /attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 833, in attendence
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-11 13:08:32,822 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 13:22:43,142 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 13:51:12,143 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 14:03:01,539 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 15:05:33,152 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 16:23:31,212 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 16:37:25,080 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 17:18:56,295 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 18:40:27,880 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 20:21:27,972 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 22:10:41,627 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 22:19:36,335 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-11 23:41:15,368 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-12 00:08:26,575 [INFO] school.views: Created Candidate Account
+2023-02-12 00:08:26,610 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-12 00:20:00,472 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-12 00:49:04,020 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-12 01:39:38,639 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-12 01:42:41,414 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-12 01:48:12,723 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
+2023-02-12 02:27:06,521 [INFO] django.request: OK: /attendence/
+Traceback (most recent call last):
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/project/venv/newsbsy/school/views.py", line 833, in attendence
+    school_code = request.user.last_name
+  File "/var/www/html/project/venv/lib/python3.8/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'last_name'
+2023-02-12 02:31:19,141 [WARNING] django.security.csrf: Forbidden (CSRF cookie not set.): /
