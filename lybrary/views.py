@@ -10,6 +10,10 @@ from rest_framework.permissions import AllowAny
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views.generic import TemplateView
+from django.contrib.auth.decorators import login_required
+from rest_framework.permissions import IsAuthenticated
+from lybrary.models import Student
+import datetime
 
 class ListUsers(APIView):
     permission_classes = [AllowAny]
@@ -86,14 +90,173 @@ def error_500(request,  *args, **kwargs):
 #     data.save()
 #     return render(request,'500.html', context)
 
-
+#@login_required(login_url='login')
 class Index(TemplateView):
     template_name = "lybrary/home.html"
-
+    permission_classes = [IsAuthenticated]
+    
+   
     def get(self, request):
         contex={}
 
         return render(request, self.template_name, contex)
+
+
+class AddStudents(TemplateView):
+    template_name = "lybrary/add_students.html"
+    permission_classes = [IsAuthenticated]
+    
+   
+    def post(self, request):
+        full_name=request.POST.get("full_name")
+        gender=request.POST.get("gender")
+        date_of_birth=request.POST.get("dob")
+        email=request.POST.get("email")
+        mobile=request.POST.get("mobile")
+        Address=request.POST.get("Address")
+        access_expiry_date=request.POST.get("access_expiry_date")
+        Father_name=request.POST.get("Father_name")
+        # full_name=request.POST.get("full_name")
+        # full_name=request.POST.get("full_name")
+        # full_name=request.POST.get("full_name")
+        date_of_birth=datetime.datetime.strptime(date_of_birth, '%d/%m/%Y').strftime('%Y-%m-%d')
+        access_expiry_date=datetime.datetime.strptime(access_expiry_date, '%d/%m/%Y').strftime('%Y-%m-%d')
+        password="12345"
+   
+    
+        print(request,request.POST,1111111111111111111111111111111111,full_name,date_of_birth)
+        
+        lybrary=Lybrary.objects.filter(user=request.user.pk).first()
+        
+
+        
+        # Student(lybrary=lybrary,user_name=user_name,Full_name=Full_name,gender=gender,date_of_birth=date_of_birth,email=email,mobile=mobile,Address=Address,access_expiry_date=access_expiry_date)
+        user_name="".join(full_name.split())
+        student,created=Student.objects.get_or_create(Full_name=full_name,gender=gender,date_of_birth=date_of_birth,email=email,mobile=mobile,Address=Address,access_expiry_date=access_expiry_date)
+        # user, created = User.objects.get_or_create(username=user_name,  is_active=1)
+        user_name=user_name+str(student.id)
+        student.user_name=user_name
+        student.Father_name=Father_name
+        student.lybrary=lybrary
+        student.password=password
+        student.save()  
+        
+       
+     
+        user, created = User.objects.get_or_create(username=user_name,  is_active=1)
+        user.set_password(password)
+        user.groups.add(7) 
+        user.save()
+        objt, created =LybraryStudents.objects.update_or_create(user=user,user_name=user_name)
+        objt.lybrary_code=lybrary.lybrary_code
+        objt.password=password
+        objt.Full_name = full_name
+        objt.Father_name=Father_name
+        objt.gender = gender
+        objt.date_of_birth = date_of_birth
+        objt.email=email
+        objt.mobile=mobile
+        objt.Address=Address
+        objt.access_expiry_date=access_expiry_date
+        objt.save()
+         
+        
+        
+        
+        contex={}
+        
+        
+
+        return render(request, self.template_name, contex)
+    
+    
+class AllStudentsView(TemplateView):
+    template_name = "lybrary/all_students_view.html"
+    permission_classes = [IsAuthenticated]
+    
+   
+    def get(self, request):
+        contex={}
+        ctc=Student.objects.all()
+        contex.update({"data":ctc})
+        
+
+        return render(request, self.template_name, contex)
+    
+
+
+class EditStudentsView(TemplateView):
+    template_name = "lybrary/edit_student_view.html"
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request,*args,**kwargs):
+        idd=kwargs["id"]
+        contex={}
+        student,created=Student.objects.get_or_create(id=idd)
+        contex.update({"std":student})
+        print(idd,1111111111111111111111111118888888888888888111111111111111111111)
+        return render(request, self.template_name, contex)
+        
+    
+    def post(self, request,*args,**kwargs):
+        idd=kwargs["id"]
+        contex={}
+        print(idd,111111111111111111111111111111111111111111111111)
+        full_name=request.POST.get("full_name")
+        gender=request.POST.get("gender")
+        date_of_birth=request.POST.get("dob")
+        email=request.POST.get("email")
+        mobile=request.POST.get("mobile")
+        Address=request.POST.get("Address")
+        access_expiry_date=request.POST.get("access_expiry_date")
+        Father_name=request.POST.get("Father_name")
+        # full_name=request.POST.get("full_name")
+        # full_name=request.POST.get("full_name")
+        # full_name=request.POST.get("full_name")
+        date_of_birth=datetime.datetime.strptime(date_of_birth, '%d/%m/%Y').strftime('%Y-%m-%d')
+        access_expiry_date=datetime.datetime.strptime(access_expiry_date, '%d/%m/%Y').strftime('%Y-%m-%d')
+        password="12345"
+        
+        lybrary=Lybrary.objects.filter(user=request.user.pk).first()
+        
+        
+        student,created=Student.objects.get_or_create(id=idd)
+        
+        student.Full_name = full_name
+        student.Father_name=Father_name
+        student.gender = gender
+        student.date_of_birth = date_of_birth
+        student.email=email
+        student.mobile=mobile
+        student.Address=Address
+        student.access_expiry_date=access_expiry_date
+        
+        student.save()
+        
+        user, created = User.objects.get_or_create(username=student.user_name,  is_active=1)
+        user.set_password(password)
+        user.groups.add(7) 
+        user.save()
+        
+        objt, created =LybraryStudents.objects.update_or_create(user=user,user_name=student.user_name)
+        objt.lybrary_code=lybrary.lybrary_code
+        objt.password=password
+        objt.Full_name = full_name
+        objt.Father_name=Father_name
+        objt.gender = gender
+        objt.date_of_birth = date_of_birth
+        objt.email=email
+        objt.mobile=mobile
+        objt.Address=Address
+        objt.access_expiry_date=access_expiry_date
+        objt.save()
+        
+
+
+        return render(request, self.template_name, contex)
+
+
+
 
 
 

@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.decorators import login_required
 from .views import *
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -25,7 +26,10 @@ urlpatterns = [
 #     path('sachin/', views.sachin, name='sachin'),
 #     path('parents/', views.parents, name='parents'),
     path('students/', ListUsers.as_view(), name='lybrary_students'),
-    path('home/', Index.as_view(), name='lybrary_home')
+    path('home/', login_required(Index.as_view()), name='lybrary_home'),
+    path('add-student/', login_required(AddStudents.as_view()), name='lybrary_add_students'),
+    path('all-students/', login_required(AllStudentsView.as_view()), name='lybrary_all_students'),
+    path('edit-student/<id>/', login_required(EditStudentsView.as_view()), name='lybrary_edit_student'),
    
 
 ]

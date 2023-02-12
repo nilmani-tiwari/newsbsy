@@ -52,6 +52,7 @@ class LybraryStudents(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
     user_name = models.CharField(max_length=200, blank=True, null=True)
     Full_name = models.CharField(max_length=200, blank=True, null=True)
+    Father_name = models.CharField(max_length=200, blank=True, null=True)
     gender = models.CharField(max_length=10, blank=True, null=True)
     date_of_birth=models.CharField(max_length=10, blank=True, null=True)
     email = models.CharField( max_length=200, blank=True, null=True)
@@ -80,12 +81,12 @@ class LybraryStudents(models.Model):
         super(LybraryStudents, self).save(*args, **kwargs)
 
 
-
 class Student(models.Model):
     # user=models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
     lybrary = models.ForeignKey('Lybrary', on_delete=models.CASCADE, blank=True, null=True)
     user_name = models.CharField(max_length=200, blank=True, null=True)
     Full_name = models.CharField(max_length=200, blank=True, null=True)
+    Father_name = models.CharField(max_length=200, blank=True, null=True)
     gender = models.CharField(max_length=10, blank=True, null=True)
     date_of_birth=models.CharField(max_length=10, blank=True, null=True)
     email = models.CharField( max_length=200, blank=True, null=True)
@@ -108,7 +109,7 @@ class Student(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def save(self,request, *args, **kwargs):
+    def save(self, *args, **kwargs):
         
         # self.user_name = self.user.pk
         

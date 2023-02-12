@@ -116,18 +116,25 @@ def home(request):
 	except:
 		pass
 
-
-
-	if User.objects.filter(groups=2, username=request.user.username).exists():#admin
+	# user=User.objects.filter(username=request.user.username)
+    # if 
+	group_name=request.user.groups.all()[0].name
+	
+	if group_name=="admin":#admin
 		return render(request,'SchoolDesign/index.html',d)
-	elif User.objects.filter(groups=5, username=request.user.username).exists():#parents
+	elif group_name=="parents":#parents
 		return redirect('parents')
-	elif User.objects.filter(groups=4, username=request.user.username).exists():#student
+	elif group_name=="student":#student
 		return redirect('student')
-	elif User.objects.filter(groups=3, username=request.user.username).exists():#teacher
+	elif group_name=="staff":#teacher
 		return 	redirect('staff')
-
+	elif group_name=="lybrary":#lybrary_owner   # 
+		
+		return 	redirect('lybrary/home')
 	else:
+		group_name=request.user.groups.all()[0].name
+		user_name=request.user.username
+		
 		return render(request, 'SchoolDesign/index.html', d)
 
 

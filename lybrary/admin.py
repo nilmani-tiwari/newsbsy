@@ -44,37 +44,37 @@ class StudentAdmin(admin.ModelAdmin):
     list_editable = [ 'status']
     search_fields=['user_name',"mobile", 'status']
     # autocomplete_fields = ['lybrary']
-    def save_model(self, request, obj, form, change):
-        # obj.user = request.user
-        try:
-            if request.user.is_superuser:
-                obj.save(request)
-            else:
-                lybrary=Lybrary.objects.filter(user=request.user.pk).first()
-                obj.lybrary=lybrary
+    # def save_model(self, request, obj, form, change):
+    #     # obj.user = request.user
+    #     try:
+    #         if request.user.is_superuser:
+    #             obj.save(request)
+    #         else:
+    #             lybrary=Lybrary.objects.filter(user=request.user.pk).first()
+    #             obj.lybrary=lybrary
 
-                user_name=obj.user_name
-                Full_name=obj.Full_name
-                user, created = User.objects.get_or_create(username=user_name,  is_active=1)
-                user.set_password("12345")
-                user.groups.add(7) 
-                user.save()
-                objt, created =LybraryStudents.objects.update_or_create(user=user,user_name=user_name)
-                objt.lybrary_code=lybrary.lybrary_code
-                objt.save()
+    #             user_name=obj.user_name
+    #             Full_name=obj.Full_name
+    #             user, created = User.objects.get_or_create(username=user_name,  is_active=1)
+    #             user.set_password("12345")
+    #             user.groups.add(7) 
+    #             user.save()
+    #             objt, created =LybraryStudents.objects.update_or_create(user=user,user_name=user_name)
+    #             objt.lybrary_code=lybrary.lybrary_code
+    #             objt.save()
                 
                 
-                # user=User(username=user_name).save()
-                # objt, created LybraryStudents.objects.update_or_create(user=user,user_name=user_name)
-                #objt, created = Person.objects.update_or_create(first_name='John', last_name='Lennon')  
-                #objt, created LybraryStudents.objects.update_or_create(user=user,user_name=user_name,Full_name=Full_name,gender=gender,email=email,mobile=mobile,status=status,password=password)
+    #             # user=User(username=user_name).save()
+    #             # objt, created LybraryStudents.objects.update_or_create(user=user,user_name=user_name)
+    #             #objt, created = Person.objects.update_or_create(first_name='John', last_name='Lennon')  
+    #             #objt, created LybraryStudents.objects.update_or_create(user=user,user_name=user_name,Full_name=Full_name,gender=gender,email=email,mobile=mobile,status=status,password=password)
 
-                obj.save(request)
-        except IntegrityError as e:
-            #obj.save(request,commit=False)
-            messages.error(request,'Error message')
-            obj.delete(request)
-            print(e)
+    #             obj.save(request)
+    #     except IntegrityError as e:
+    #         #obj.save(request,commit=False)
+    #         messages.error(request,'Error message')
+    #         obj.delete(request)
+    #         print(e)
 
     def get_queryset(self, request): 
         # For Django < 1.6, override queryset instead of get_queryset
