@@ -104,7 +104,7 @@ class Student(models.Model):
     # student_card_number=models.CharField(max_length=200, null=True,blank=True)
     status=models.BooleanField(default=True)
     password=models.CharField(max_length=200, blank=True, null=True)
-    access_expiry_date=models.DateTimeField(blank=True, null=True)
+    access_expiry_date=models.CharField(max_length=10,blank=True, null=True)
     #created_on = models.DateTimeField(default=datetime.now, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -540,8 +540,8 @@
 
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Date Of Birth *</label>
-                                    <input type="date" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
-                                       id="ddldob" name="dob" value="{{std.date_of_birth}}" required>
+                                    <input type="text" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
+                                       id="ddldob" name="date_of_birth" value="{{std.date_of_birth}}" required>
                                     <i class="far fa-calendar-alt"></i>
                                 </div>
 
@@ -570,14 +570,19 @@
 
                                 <div class="col-xl-3 col-lg-6 col-12 form-group">
                                     <label>Access expiry date: *</label>
-                                    <input type="date" type="date"
-                                    name="party"
-                                    min="2017-04-01"
-                                    max="2017-04-20" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
+                                    <input type="text" placeholder="dd/mm/yyyy" class="form-control air-datepicker"
                                        id="ddldob" name="access_expiry_date" value="{{std.access_expiry_date}}" required>
                                     <i class="far fa-calendar-alt"></i>
                                 </div>
 
+                               
+
+
+                                <div class="col-xl-3 col-lg-6 col-12 form-group form-check">
+                                    <input type="checkbox" name="status" class="form-control" {% if std.status %} checked {% endif %} class="form-check-input">
+
+                                    <label class="form-check-label">Status</label>
+                                </div>
                                
 
                 

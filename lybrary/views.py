@@ -40,7 +40,7 @@ class ListUsers(APIView):
         # return Response(usernames)
         #mydata = Member.objects.filter(firstname='Emil').values()
         
-        data = LybraryStudents.objects.filter(lybrary_code=lybrary_code).values("student_card_number","user_name")
+        data = LybraryStudents.objects.filter(lybrary_code=lybrary_code,status=True).values("student_card_number","user_name")
         result={}
         for i in data:
             key= i['student_card_number']
@@ -194,27 +194,38 @@ class EditStudentsView(TemplateView):
         contex={}
         student,created=Student.objects.get_or_create(id=idd)
         contex.update({"std":student})
-        print(idd,1111111111111111111111111118888888888888888111111111111111111111)
+        
         return render(request, self.template_name, contex)
         
     
     def post(self, request,*args,**kwargs):
         idd=kwargs["id"]
         contex={}
-        print(idd,111111111111111111111111111111111111111111111111)
+        
         full_name=request.POST.get("full_name")
         gender=request.POST.get("gender")
-        date_of_birth=request.POST.get("dob")
+        date_of_birth=request.POST.get("date_of_birth")
         email=request.POST.get("email")
         mobile=request.POST.get("mobile")
         Address=request.POST.get("Address")
         access_expiry_date=request.POST.get("access_expiry_date")
         Father_name=request.POST.get("Father_name")
+        status=request.POST.get("status")
+        status=True if status else False
         # full_name=request.POST.get("full_name")
         # full_name=request.POST.get("full_name")
         # full_name=request.POST.get("full_name")
-        date_of_birth=datetime.datetime.strptime(date_of_birth, '%d/%m/%Y').strftime('%Y-%m-%d')
-        access_expiry_date=datetime.datetime.strptime(access_expiry_date, '%d/%m/%Y').strftime('%Y-%m-%d')
+        print(access_expiry_date,"date_of_birth",date_of_birth,status)
+        if "-" in date_of_birth:
+            date_of_birth=datetime.datetime.strptime(date_of_birth, '%Y-%m-%d').strftime('%Y-%m-%d')
+        else: 
+            date_of_birth=datetime.datetime.strptime(date_of_birth, '%d/%m/%Y').strftime('%Y-%m-%d')
+            
+        if "-" in access_expiry_date:
+            access_expiry_date=datetime.datetime.strptime(access_expiry_date, '%Y-%m-%d').strftime('%Y-%m-%d')
+        else: 
+            access_expiry_date=datetime.datetime.strptime(access_expiry_date, '%d/%m/%Y').strftime('%Y-%m-%d')
+        
         password="12345"
         
         lybrary=Lybrary.objects.filter(user=request.user.pk).first()
@@ -230,6 +241,7 @@ class EditStudentsView(TemplateView):
         student.mobile=mobile
         student.Address=Address
         student.access_expiry_date=access_expiry_date
+        student.status=status
         
         student.save()
         
@@ -249,6 +261,7 @@ class EditStudentsView(TemplateView):
         objt.mobile=mobile
         objt.Address=Address
         objt.access_expiry_date=access_expiry_date
+        objt.status=status
         objt.save()
         
 
