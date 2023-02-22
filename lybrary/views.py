@@ -97,7 +97,12 @@ class Index(TemplateView):
     
    
     def get(self, request):
+        
         contex={}
+        
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
+        print(8888888888888888888888888888888888888888888888888888888888)
 
         return render(request, self.template_name, contex)
 
@@ -108,6 +113,7 @@ class AddStudents(TemplateView):
     
    
     def post(self, request):
+        print(11111111111111111111111111111111111111111)
         full_name=request.POST.get("full_name")
         gender=request.POST.get("gender")
         date_of_birth=request.POST.get("dob")
@@ -149,6 +155,7 @@ class AddStudents(TemplateView):
         user.save()
         objt, created =LybraryStudents.objects.update_or_create(user=user,user_name=user_name)
         objt.lybrary_code=lybrary.lybrary_code
+        print(lybrary.lybrary_code,99999999999999999999999999999999999999999999999)
         objt.password=password
         objt.Full_name = full_name
         objt.Father_name=Father_name
@@ -164,6 +171,8 @@ class AddStudents(TemplateView):
         
         
         contex={}
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
         
         
 
@@ -173,14 +182,13 @@ class AddStudents(TemplateView):
 class AllStudentsView(TemplateView):
     template_name = "lybrary/all_students_view.html"
     permission_classes = [IsAuthenticated]
-    
-   
     def get(self, request):
         contex={}
-        ctc=Student.objects.all()
+        lybrary=Lybrary.objects.filter(user=request.user.pk).first()
+        ctc=Student.objects.filter(lybrary=lybrary)
         contex.update({"data":ctc})
-        
-
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
         return render(request, self.template_name, contex)
     
 
@@ -194,6 +202,8 @@ class EditStudentsView(TemplateView):
         contex={}
         student,created=Student.objects.get_or_create(id=idd)
         contex.update({"std":student})
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
         
         return render(request, self.template_name, contex)
         
@@ -201,6 +211,8 @@ class EditStudentsView(TemplateView):
     def post(self, request,*args,**kwargs):
         idd=kwargs["id"]
         contex={}
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
         
         full_name=request.POST.get("full_name")
         gender=request.POST.get("gender")

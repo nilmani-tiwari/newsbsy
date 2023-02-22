@@ -1,3 +1,7 @@
+{% extends base %}
+
+{% block rightboard %}
+
 <!doctype html>
 {% load static %}
 <html class="no-js" lang="">
@@ -194,11 +198,232 @@
 
 
 
-            {% block rightboard %}
- 
-            {% endblock %} 
 
 
+
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
+
+                <div class="breadcrumbs">
+                        
+                        <ul>
+                            <li>
+                                <a href="/">Home</a>
+                                /
+                                <a href="/">School and Owner Details</a>
+                               
+                            </li>
+                           
+                        </ul>
+                    </div>
+                <!-- Breadcubs Area Start Here -->
+        
+                <!-- Breadcubs Area End Here -->
+                <!-- Dashboard summery Start Here -->
+                <div class="row gutters-20">
+
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-green ">
+                                        <i class="flaticon-classmates text-green"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Students</div>
+                                        <div class="item-number"><span class="counter" data-num="{{student}}"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-blue">
+                                        <i class="flaticon-multiple-users-silhouette text-blue"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Staffs</div>
+                                        <div class="item-number"><span class="counter" data-num="{{teacher}}"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="dashboard-summery-one mg-b-20">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div class="item-icon bg-light-yellow">
+                                        <i class="flaticon-couple text-orange"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="item-content">
+                                        <div class="item-title">Parents</div>
+                                        <div class="item-number"><span class="counter" data-num="{{parents}}"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                </div>
+
+                <!-- Dashboard summery End Here -->
+                <!-- Dashboard Content Start Here -->
+                <div class="row gutters-20">
+
+
+                 <div class="col-lg-6 col-xl-6 col-4-xxxl">
+                        <div class="card dashboard-card-six pd-b-20">
+                            <div class="card-body">
+                                <div class="heading-layout1 mg-b-17">
+                                    <div class="item-title">
+                                        <h3>Notice Board</h3>
+                                    </div>
+
+                                </div>
+
+                                <style>.blinking{
+                                        animation:blinkingText 1.2s infinite;
+                                    }
+                                    @keyframes blinkingText{
+                                        0%{     color: #FF0000;    }
+                                        49%{    color: #FF0000; }
+                                        60%{    color: transparent; }
+                                        99%{    color:transparent;  }
+                                        100%{   color: #FF0000;    }
+                                    }
+                                    </style>
+                                <div class="notice-box-wrap">
+                                    <div class="notice-list">
+                                          {% for i in x %}
+                                    <div class="notice-list">
+
+                                        <div class="post-date bg-skyblue">{{i.Date}}</div>
+                                         <h5 class="notice-title"><a href="#">{{i.Title}}:</a></h5>
+                                        <h6 class="notice-title"><a href="#">{{i.Details}}</a></h6>
+                                        <div class="entry-meta">{{i.Posted_by}}/<span>{{i.diff}}</span> <span class="blinking">{{i.status}}</span></div>
+                                    </div>
+                                    {% endfor %}
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Dashboard Content End Here -->
+                <!-- Social Media Start Here -->
+
+          <div class="row gutters-20">
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+
+                        <div class="card dashboard-card-seven">
+                            <div class="social-media bg-fb hover-fb">
+                                <div class="media media-none--lg">
+                                    <div class="social-icon">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="media-body space-sm">
+                                         <!-- <a href="https://www.facebook.com/" class="nav-link"><i class="item-title"></i>Like us on facebook
+                                        </a> -->
+                                        <h6 class="item-title"><a href="https://www.facebook.com/" class="nav-link"><i class="item-title"></i>Like us on facebook
+                                        </a></h6>
+                                    </div>
+                                </div>
+                                <div class="social-like"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- <div class="col-lg-3 col-sm-6 col-12">
+
+                        <div class="card dashboard-card-seven">
+                            <div class="social-media bg-fb hover-fb">
+                                <div class="media media-none--lg">
+                                        <div class="social-icon">
+                                        <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="media-body space-sm">
+                                            <h6 class="item-title"><a href="https://www.facebook.com/" class="nav-link"><i class="item-title"></i>Like us on facebook
+                                            </a></h6>
+                                        </div>
+                                </div>
+                                <div class="social-like"></div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                    <div class="col-lg-3 col-sm-6 col-12">
+
+                        <div class="card dashboard-card-seven">
+                            <div class="social-media bg-twitter hover-twitter">
+                                <div class="media media-none--lg">
+                                        <div class="social-icon">
+                                        <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="media-body space-sm">
+                                            <h6 class="item-title">Follow us on twitter</h6>
+                                        </div>
+                                </div>
+                                <div class="social-like"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <div class="col-xl-3 col-sm-6 col-12" style="color:#25D366;" >
+                        <div class="card dashboard-card-seven" style="color:#25D366;" >
+                            <div class="social-media bg-linkedin hover-linked" style="color:#25D366;" >
+                                <div class="media media-none--lg" style="color:#25D366;" >
+                                    <div class="social-icon" style="color:#25D366;" >
+                                    <!--<i class="fab fa-linkedin-in"></i>  #25D366-->
+                                    <i class="fab fa-linkedin-n">Wa</i>
+
+                                    </div>
+                                    <div class="media-body space-sm">
+                                        <!--<h6 class="item-title">Follow us on linked</h6>-->
+                                        
+                                        <h6 class="item-title">  Whatsapp Support  <a href="tel:9729888990" class="">9729888990</a></h6>
+                                    </div>
+                                </div>
+                                <div class="social-like"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
                 <!-- Social Media End Here -->
@@ -368,91 +593,6 @@
     }
 
 
-</script>
-
-
-
-<script>
-  var el_up = document.getElementById("GFG_UP");
-
-  el_up.innerHTML =
-      "Click on the LINK for further confirmation.";
-</script>
-
-
-<script>
-  $("#ddlmedium").change(function () {
-      var url = $("#ddlmedium").attr("data-url");  // get the url of the `load_courses` view
-      var X = $(this).val();  // get the selected programming ID from the HTML input
-
-      $.ajax({                       // initialize an AJAX request
-          url: url,                    // set the url of the request (= localhost:8000/load-courses/)
-          data: {
-              'medium_name': X      // add the programming id to the GET parameters
-          },
-          success: function (data) {   // `data` is the return of the `load_courses` view function
-              $("#ddlclass").html(data);  // replace the contents of the course input with the data that came from the server
-          }
-      });
-
-  });
-</script>
-
-<script>
-  $("#ddlclass").change(function () {
-      var url = $("#ddlclass").attr("data-url1");  // get the url of the `load_courses` view
-      var X = $(this).val();  // get the selected programming ID from the HTML input
-
-      $.ajax({                       // initialize an AJAX request
-          url: url,                    // set the url of the request (= localhost:8000/load-courses/)
-          data: {
-              'class_name': X      // add the programming id to the GET parameters
-          },
-          success: function (data) {   // `data` is the return of the `load_courses` view function
-              $("#ddlDivision").html(data);  // replace the contents of the course input with the data that came from the server
-          }
-      });
-
-  });
-</script>
-
-
-
-<script>
-  function createPDF() {
-      var sTable = document.getElementById('myid').innerHTML;
-
-      var style = "<style>";
-
-
-
-      style = style + "table {width: 100%;font: 17px Calibri;}";
-      style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
-      style = style + "padding: 2px 3px;text-align: center;}";
-      style = style + "</style>";
-
-      // CREATE A WINDOW OBJECT.
-      var win = window.open('', '', 'height=700,width=700');
-
-      win.document.write('<html><head>');
-
-      var date = new Date();
-      var day = date.getDate();
-      var month = date.getMonth() + 1;
-      var year = date.getFullYear();
-      win.document.write("<title>All-Students -:{{ request.user.first_name }} " + day + "/" + month + "/" + year + "</title>");
-
-      // win.document.write('<title>Students-attendance</title>');   // <title> FOR PDF HEADER.
-      win.document.write(style);          // ADD STYLE INSIDE THE HEAD TAG.
-      win.document.write('</head>');
-      win.document.write('<body>');
-      win.document.write(sTable);         // THE TABLE CONTENTS INSIDE THE BODY TAG.
-      win.document.write('</body></html>');
-
-      win.document.close(); 	// CLOSE THE CURRENT WINDOW.
-
-      win.print();    // PRINT THE CONTENTS.
-  }
 </script>
 
 </body>
