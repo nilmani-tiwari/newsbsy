@@ -337,7 +337,6 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-#STATIC_ROOT=os.path.join(BASE_DIR,"/static/")                # comment STATICFILES_DIRS and uncomment STATIC_ROOT for python manage.py collectstatic  make DEBUG = True then runserver
 
 if not DEBUG:
     EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
