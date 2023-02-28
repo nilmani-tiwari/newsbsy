@@ -38,11 +38,11 @@ SECRET_KEY = 'qj8may(ldb_&zu$ne6t4%(!(u4xia*a+%ud4%+s@*&+ywl+)6c'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
 DEBUG = True
-# DEBUG = True
 # ALLOWED_HOSTS = ["*","sbsy.co.in","www.sbsy.co.in","103.129.97.81"]
-ALLOWED_HOSTS = ['*', 'sbsy.co.in','www.sbsy.co.in',"103.129.97.81","http://localhost/","http://sbsy.co.in:8000/"]
-
+ALLOWED_HOSTS = ['*', 'sbsy.co.in','www.sbsy.co.in',"103.129.97.81","http://localhost/","http://sbsy.co.in:8000/","https://ad53-157-119-80-37.in.ngrok.io/"]
+CSRF_TRUSTED_ORIGINS = ['https://your-domain.com', 'https://www.your-domain.com',"https://ad53-157-119-80-37.in.ngrok.io","https://aa6e-157-119-80-37.in.ngrok.io"]
 
 # Application definition
 
@@ -121,7 +121,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -329,6 +329,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -337,6 +339,11 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+#STATIC_ROOT=os.path.join(BASE_DIR,"/static/")                # comment STATICFILES_DIRS and uncomment STATIC_ROOT for python manage.py collectstatic  make DEBUG = True then runserver
+
+
+# import os
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 if not DEBUG:
     EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
@@ -372,108 +379,37 @@ except ImportError:
         def emit(self, record):
             pass
 
-# log = logging.getLogger(__name__)
-# log.addHandler(NullHandler())
-
-# def demo(foo):
-#     if 1:
-#         log.debug('doh!')
-#     return
-
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': True,
-#     'formatters': {
-#         'standard': {
-#             'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-#             'datefmt': "%d/%b/%Y %H:%M:%S"
-#         },
-#     },
-#     'handlers': {
-#         # 'null': {
-#         #     'level': 'DEBUG',
-#         #     'class': 'django.utils.log.NullHandler',
-#         # },
-#         'logfile': {
-#             'level': 'DEBUG',
-#             'class': 'logging.handlers.RotatingFileHandler',
-#             'filename': 'dataflair-debug.log',
-#             'maxBytes': 50000,
-#             'backupCount': 2,
-#             'formatter': 'standard',
-#         },
-#         'console': {
-#             'level': 'INFO',
-#             'class': 'logging.StreamHandler',
-#             'formatter': 'standard'
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['console'],
-#             'propagate': True,
-#             'level': 'WARN',
-#         },
-#         'django.db.backends': {
-#             'handlers': ['console'],
-#             'level': 'DEBUG',
-#             'propagate': False,
-#         },
-#         '': {
-#             'handlers': ['console', 'logfile'],
-#             'level': 'DEBUG',
-#         },
-#     }
-# }
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'handlers': {
-#         'file': {
-#             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
-#             'filename': 'debug.log',
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['file'],
-#             'level': 'DEBUG',
-#             'propagate': True,
-#         },
-#     },
-# }
 
 
 
-# # DataFlair #Logging Information
-# LOGGING = {
-#     'version': 1,
-#     # Version of logging
-#     'disable_existing_loggers': False,
-#     #disable logging 
-#     # Handlers #############################################################
-#     'handlers': {
-#         'file': {
-#             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
-#             'filename': '/var/www/html/project/venv/newsbsy/debug.log',
-#         },
-# ########################################################################
-#         'console': {
-#             'class': 'logging.StreamHandler',
-#         },
-#     },
-#     # Loggers ####################################################################
-#     'loggers': {
-#         'django': {
-#             'handlers': ['file', 'console'],
-#             'level': 'DEBUG',
-#             'propagate': True,
-#             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG')
-#         },
-#     },
-# }
+# DataFlair #Logging Information
+LOGGING = {
+    'version': 1,
+    # Version of logging
+    'disable_existing_loggers': True,
+    #disable logging 
+    # Handlers #############################################################
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'log/newsbsy/sbsy-debug.log',
+        },
+########################################################################
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    # Loggers ####################################################################
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'DEBUG',
+            'propagate': True,
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG')
+        },
+    },
+}
 
 
 
@@ -494,7 +430,7 @@ except ImportError:
 #         'file': {
 #             'level': 'DEBUG',
 #             'class': 'logging.FileHandler',
-#             'filename': '/var/www/html/project/venv/newsbsy/debug.log',
+#             'filename': 'debug.log',
 #             'formatter': 'verbose'
 #         },
 #     },
@@ -511,57 +447,64 @@ except ImportError:
 
 
 
-# LOGGING = {
-# 'version': 1,
-# 'disable_existing_loggers': True,
+LOGGING = {
+'version': 1,
+'disable_existing_loggers': True,
 
-# 'formatters': {
+'formatters': {
 
-#     'standard': {
-#         'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
-#     },
-# },
+    'standard': {
+        'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+    },
+},
 
-# 'handlers': {
-#     'file': {
-#             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
-#             'filename': '/var/www/html/project/venv/newsbsy/debug.log',
-#             'formatter': 'standard',
-#         },
-#     'default': {
-#         'level':'INFO',
-#         'class':'logging.handlers.RotatingFileHandler',
-#         'filename': os.path.join(BASE_DIR, 'sbsy-debug.log'),
-#         'maxBytes': 1024*1024*5, # 5 MB
-#         'backupCount': 5,
-#         'formatter':'standard',
-#     },
-#     'logfile': {
-#         'level': 'INFO',
-#         'class': 'logging.FileHandler',
-#         'filename': os.path.join(BASE_DIR, 'debug.log'),
-#     },
-# },
+'handlers': {
+    'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'log/newsbsy/sbsy-debug.log',
+            'formatter': 'standard',
+        },
+    'default': {
+        'level':'INFO',
+        'class':'logging.handlers.RotatingFileHandler',
+        'filename': os.path.join(BASE_DIR, 'log/newsbsy/sbsy-debug.log'),
+        'maxBytes': 1024*1024*5, # 5 MB
+        'backupCount': 5,
+        'formatter':'standard',
+    },
+    'logfile': {
+        'level': 'INFO',
+        'class': 'logging.FileHandler',
+        'filename': os.path.join(BASE_DIR, 'log/newsbsy/debug.log'),
+    },
+},
 
-# 'loggers': {
-#     'django.request': {
-#         'handlers': ['default'],
-#         'level': 'INFO',
-#         'propagate': False,
-#     },
-#     # 'django.request': {
-#     #     'handlers': ['logfile'],
-#     #     'level': 'WARNING',
-#     #     'propagate': True,
-#     # },
-#     '': {
-#         'handlers': ['default'],
-#         'level': 'INFO',
-#         'propagate': True,
-#     },
-# }
+'loggers': {
+    'django.request': {
+        'handlers': ['default'],
+        'level': 'INFO',
+        'propagate': True,
+    },
+    # 'django.request': {
+    #     'handlers': ['logfile'],
+    #     'level': 'WARNING',
+    #     'propagate': True,
+    # },
+    '': {
+        'handlers': ['default'],
+        'level': 'INFO',
+        'propagate': True,
+    },
+}
 
-# }
+}
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+
+
+try:
+    from .nginx_settings import *
+except ImportError:
+    pass

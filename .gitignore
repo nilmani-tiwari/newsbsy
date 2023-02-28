@@ -12,8 +12,10 @@ migrations
 *.log
 */migrations
 /static/
+/log/
 debug.log
 /media/
+newsbsy/nginx_settings.py
 *.json
 logstash.db
 profiler_data/*.prof
