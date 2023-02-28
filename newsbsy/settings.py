@@ -46,15 +46,6 @@ CSRF_TRUSTED_ORIGINS = ['https://your-domain.com', 'https://www.your-domain.com'
 
 # Application definition
 
-# INSTALLED_APPS = [
-#     'django.contrib.admin',
-#     'django.contrib.auth',
-#     'django.contrib.contenttypes',
-#     'django.contrib.sessions',
-#     'django.contrib.messages',
-#     'django.contrib.staticfiles',
-# ]
-
 
 INSTALLED_APPS = [
     #  'adminlte3',
@@ -75,36 +66,6 @@ INSTALLED_APPS = [
      
 ]
 
-
-
-
-# MIDDLEWARE = [
-#     'django.middleware.security.SecurityMiddleware',
-#     'django.contrib.sessions.middleware.SessionMiddleware',
-#     'django.middleware.common.CommonMiddleware',
-#     'django.middleware.csrf.CsrfViewMiddleware',
-#     'django.contrib.auth.middleware.AuthenticationMiddleware',
-#     'django.contrib.messages.middleware.MessageMiddleware',
-#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-# ]
-
-# ROOT_URLCONF = 'newtest.urls'
-
-# TEMPLATES = [
-#     {
-#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-#         'DIRS': [],
-#         'APP_DIRS': True,
-#         'OPTIONS': {
-#             'context_processors': [
-#                 'django.template.context_processors.debug',
-#                 'django.template.context_processors.request',
-#                 'django.contrib.auth.context_processors.auth',
-#                 'django.contrib.messages.context_processors.messages',
-#             ],
-#         },
-#     },
-# ]
 
 
 #add this
@@ -180,75 +141,6 @@ DATABASES = {
         'NAME': str(BASE_DIR / '../newsbsyDb/db.sqlite3'),
     }
 }
-
-
-# DATABASES = {
-#   'default': {
-#       'ENGINE': 'django.db.backends.mysql', 
-#     #   'NAME': 'sbsy-india',
-#       'USER': 'admin',
-#       'PASSWORD': 'admin#2023',
-#       'HOST': 'sbsy-india.ctc9p0shknta.us-east-1.rds.amazonaws.com',   # Or an IP Address that your 103.129.97.81 DB is hosted on157.37.136.25    103.129.97.229  sbsy.co.in
-#       'PORT': 3306,
-      
-#     'CONN_MAX_AGE':120,
-#         'OPTIONS' : {
-#                 'charset': 'utf8mb4',
-#                  # This sets the default storage engine upon connecting to the database.
-#                  # This should be removed after tables are created as it adds a query
-#                  # that is only needed during table creation to each database connection.
-#                 'init_command': 'SET default_storage_engine=INNODB',
-#                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#                 'isolation_level': 'read committed'
-#         },
-#   }
-# }
-
-
-
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': env("DB_NAME"),
-#         'HOST': env('DB_HOST'),
-#         'PORT': env('DB_PORT'),
-#         'USER': env('DB_USER'),
-#         'PASSWORD': env('DB_PASS'),
-#         # Time in seconds after which DB connection is refreshed.
-#         # Default is 0, i.e. connection refreshed after every request is completed
-#         # Setting to be fine tuned with real load
-#         'CONN_MAX_AGE':120,
-#         'OPTIONS' : {
-#                 'charset': 'utf8mb4',
-#                  # This sets the default storage engine upon connecting to the database.
-#                  # This should be removed after tables are created as it adds a query
-#                  # that is only needed during table creation to each database connection.
-#                 'init_command': 'SET default_storage_engine=INNODB',
-#                 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#                 'isolation_level': 'read committed'
-#         },
-#     }
-# }
-
-# DATABASES = {
-#   'default': {
-#       'ENGINE': 'django.db.backends.mysql', 
-#       'NAME': 'sbsycoin_newschool',
-#       'USER': 'sbsycoin_nilmani',
-#       'PASSWORD': 'Nilmani@nilmani',
-#       'HOST': '103.129.97.244',   # Or an IP Address that your 103.129.97.81 DB is hosted on157.37.136.25    103.129.97.229  sbsy.co.in
-#       'PORT': '3306',
-      
-#       "OPTIONS": {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
-#             'charset': 'utf8mb4',
-#             "autocommit": True,
-#         }
-#   }
-# }
-
 
 
 # Password validation
@@ -369,82 +261,6 @@ LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
 # DataFlair #Logging Information
-
-
-import logging
-try:  # Python 2.7+
-    from logging import NullHandler
-except ImportError:
-    class NullHandler(logging.Handler):
-        def emit(self, record):
-            pass
-
-
-
-
-# DataFlair #Logging Information
-LOGGING = {
-    'version': 1,
-    # Version of logging
-    'disable_existing_loggers': True,
-    #disable logging 
-    # Handlers #############################################################
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'log/newsbsy/sbsy-debug.log',
-        },
-########################################################################
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    # Loggers ####################################################################
-    'loggers': {
-        'django': {
-            'handlers': ['file', 'console'],
-            'level': 'DEBUG',
-            'propagate': True,
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG')
-        },
-    },
-}
-
-
-
-
-# LOGGINGs = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'formatters': {
-#         'verbose': {
-#             'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-#             'datefmt' : "%d/%b/%Y %H:%M:%S"
-#         },
-#         'simple': {
-#             'format': '%(levelname)s %(message)s'
-#         },
-#     },
-#     'handlers': {
-#         'file': {
-#             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
-#             'filename': 'debug.log',
-#             'formatter': 'verbose'
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers':['file'],
-#             'propagate': True,
-#             'level':'DEBUG',
-#         },
-
-#     }
-# }
-
-
 
 
 LOGGING = {
