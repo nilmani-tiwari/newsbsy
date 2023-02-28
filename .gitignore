@@ -13,6 +13,7 @@ migrations
 */migrations
 /static/
 /log/
+/venv/
 debug.log
 /media/
 newsbsy/nginx_settings.py

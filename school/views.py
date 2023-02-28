@@ -117,12 +117,13 @@ def home(request):
 		pass
 
 	# user=User.objects.filter(username=request.user.username)
-    # if 
+	if request.user.is_superuser:
+		return redirect("/admin/")
 	group_name=request.user.groups.all()[0].name
 	
 	if group_name=="admin":#admin
 		return render(request,'SchoolDesign/index.html',d)
-	elif group_name=="parents":#parents
+	elif group_name=="parents":#parents/
 		return redirect('parents')
 	elif group_name=="student":#student
 		return redirect('student')
