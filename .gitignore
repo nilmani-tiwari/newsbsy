@@ -11,7 +11,6 @@ migrations
 *.xml
 *.log
 */migrations
-/static/
 /log/
 /venv/
 debug.log
