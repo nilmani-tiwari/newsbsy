@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 from lybrary.models import *
@@ -13,7 +13,13 @@ from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 from rest_framework.permissions import IsAuthenticated
 from lybrary.models import Student
+from django.contrib.auth import authenticate, login, logout
 import datetime
+from newsbsy import settings
+import logging
+from school.models import Profile
+log_handle = logging.getLogger(__name__)
+log_handle.info('In Lybrart.views.py')
 
 class ListUsers(APIView):
     permission_classes = [AllowAny]
@@ -111,6 +117,16 @@ class AddStudents(TemplateView):
     template_name = "lybrary/add_students.html"
     permission_classes = [IsAuthenticated]
     
+    def get(self, request):
+        contex={}
+        lybrary=Lybrary.objects.filter(user=request.user.pk).first()
+        ctc=Student.objects.filter(lybrary=lybrary)
+        contex.update({"data":ctc})
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
+        return render(request, self.template_name, contex)
+    
+    
    
     def post(self, request):
         print(11111111111111111111111111111111111111111)
@@ -171,7 +187,7 @@ class AddStudents(TemplateView):
         
         
         contex={}
-        base={ 'base': "lybrary/base.html" }
+        base={ 'base': settings.TEMPLATE_BASE_PATH }
         contex.update(base)
         
         
@@ -276,9 +292,118 @@ class EditStudentsView(TemplateView):
         objt.status=status
         objt.save()
         
+        return redirect("/lybrary/all-students/")
 
 
+class AddLybrary(TemplateView):
+    template_name = "lybrary/add_lybrary/index.html"
+    permission_classes = [IsAuthenticated]
+    
+    def get(self, request,*args,**kwargs):
+        # idd=kwargs["id"]
+        contex={}
+        # student,created=Student.objects.get_or_create(id=idd)
+        # contex.update({"std":student})
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
+        
         return render(request, self.template_name, contex)
+        
+    
+    def post(self, request,*args,**kwargs):
+        # idd=kwargs["id"]
+        contex={}
+        base={ 'base': "lybrary/base.html" }
+        contex.update(base)
+        
+        name=request.POST.get("name")
+        email=request.POST.get("email")
+        number=request.POST.get("number")
+        password=request.POST.get("password")
+        
+        user, created = User.objects.get_or_create(username=email,  is_active=1)
+        if created:
+            user.first_name=name
+            user.set_password(password)
+            user.groups.add(6) 
+            lybrary_code="".join(name.split())+str(user.id)
+            user.last_name=lybrary_code
+            user.is_staff=True
+            user.email=email
+            user.save()
+        else:
+            message="User Already Exists"
+            log_handle.info(f'In add Lybrart.views.py message {message} ')
+            user_tologin = authenticate(request, username=email, password=password)    
+            if user is not None:
+                Profile.objects.get_or_create(user=user)
+                obj=Profile.objects.filter(user=user)
+                obj.update(is_online=True)
+                login(request, user_tologin)
+                return redirect("/lybrary/home/")
+            return render(request, self.template_name, contex)
+            
+        LybraryOwner(user=user,owner_name=name,owner_email=email,owner_mobile=number,lybrary_code=lybrary_code).save()
+        Lybrary(user=user,lybrary_code=lybrary_code,email=email,mobile=number,password=password).save()
+        
+        user_tologin = authenticate(request, username=email, password=password)    
+        if user is not None:
+            Profile.objects.get_or_create(user=user)
+            obj=Profile.objects.filter(user=user)
+            obj.update(is_online=True)
+            login(request, user_tologin)
+        
+        log_handle.info(f'In add Lybrart.views.py name {name} , email {email} numbewordr {number} pass {password}')
+        # access_expiry_date=request.POST.get("access_expiry_date")
+        # Father_name=request.POST.get("Father_name")
+        # status=request.POST.get("status")
+        # status=True if status else False
+        # # full_name=request.POST.get("full_name")
+        # # full_name=request.POST.get("full_name")
+        # # full_name=request.POST.get("full_name")
+        # print(access_expiry_date,"date_of_birth",date_of_birth,status)
+        # if "-" in date_of_birth:
+        #     date_of_birth=datetime.datetime.strptime(date_of_birth, '%Y-%m-%d').strftime('%Y-%m-%d')
+        # else: 
+        #     date_of_birth=datetime.datetime.strptime(date_of_birth, '%d/%m/%Y').strftime('%Y-%m-%d')
+            
+        # if "-" in access_expiry_date:
+        #     access_expiry_date=datetime.datetime.strptime(access_expiry_date, '%Y-%m-%d').strftime('%Y-%m-%d')
+        # else: 
+        #     access_expiry_date=datetime.datetime.strptime(access_expiry_date, '%d/%m/%Y').strftime('%Y-%m-%d')
+        
+        # password="12345"
+        # lybrary=Lybrary.objects.filter(user=request.user.pk).first()
+        # student,created=Student.objects.get_or_create(id=idd)
+        # student.Full_name = full_name
+        # student.Father_name=Father_name
+        # student.gender = gender
+        # student.date_of_birth = date_of_birth
+        # student.email=email
+        # student.mobile=mobile
+        # student.Address=Address
+        # student.access_expiry_date=access_expiry_date
+        # student.status=status
+        # student.save()
+        # user, created = User.objects.get_or_create(username=student.user_name,  is_active=1)
+        # user.set_password(password)
+        # user.groups.add(7) 
+        # user.save()
+        # objt, created =LybraryStudents.objects.update_or_create(user=user,user_name=student.user_name)
+        # objt.lybrary_code=lybrary.lybrary_code
+        # objt.password=password
+        # objt.Full_name = full_name
+        # objt.Father_name=Father_name
+        # objt.gender = gender
+        # objt.date_of_birth = date_of_birth
+        # objt.email=email
+        # objt.mobile=mobile
+        # objt.Address=Address
+        # objt.access_expiry_date=access_expiry_date
+        # objt.status=status
+        # objt.save()
+        
+        return redirect("/lybrary/home/")
 
 
 

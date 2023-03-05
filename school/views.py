@@ -18,7 +18,7 @@ import json
 import requests
 import logging
 log_handle = logging.getLogger(__name__)
-log_handle.info('Created Candidate Account')
+log_handle.info('In School.views.py')
 
 @unauthenticated_user
 def loginPage(request):
@@ -131,7 +131,7 @@ def home(request):
 		return 	redirect('staff')
 	elif group_name=="lybrary":#lybrary_owner   # 
 		
-		return 	redirect('lybrary/home')
+		return 	redirect('lybrary/home/')
 	else:
 		group_name=request.user.groups.all()[0].name
 		user_name=request.user.username

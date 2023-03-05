@@ -30,6 +30,6 @@ urlpatterns = [
     path('add-student/', login_required(AddStudents.as_view()), name='lybrary_add_students'),
     path('all-students/', login_required(AllStudentsView.as_view()), name='lybrary_all_students'),
     path('edit-student/<id>/', login_required(EditStudentsView.as_view()), name='lybrary_edit_student'),
-   
-
+    path('add/', AddLybrary.as_view(), name='add_lybrary'),
+    
 ]

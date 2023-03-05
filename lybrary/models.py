@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 
-
 class LybraryOwner(models.Model):
     user=models.OneToOneField(User, on_delete=models.CASCADE,primary_key=True)
     owner_name = models.CharField(max_length=200, blank=True, null=True)
@@ -24,7 +23,9 @@ class LybraryOwner(models.Model):
 
     def __str__(self):
         return self.owner_name
-
+    
+# LybraryOwner(user=user,owner_name=owner_name,owner_email=owner_email,owner_mobile=owner_mobile,lybrary_code=lybrary_code)
+# Lybrary(user=user,lybrary_code=lybrary_code,email=email,mobile=mobile,password=password)
 
 class Lybrary(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE, blank=True, null=True)
