@@ -3384,12 +3384,12 @@ ul {
 }
 .login-page-content .login-box {
   min-width: 470px;
-  padding: 6rem 7rem;
+  padding: 3rem 6rem;
   border-radius: 4px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 5px 49px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 5px 49px 0px rgba(0, 0, 0, 0.5);
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 @media only screen and (max-width: 575px) {
   .login-page-content .login-box {

@@ -10,86 +10,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'SchoolDesign/img/favicon.png' %}">
-    <!-- Normalize CSS -->
-<!--    <link rel="stylesheet" href="css/normalize.css">-->
-     <link rel="stylesheet" href="{% static 'SchoolDesign/css/normalize.css' %}">
-    <!-- Main CSS -->
-<!--    <link rel="stylesheet" href="css/main.css">-->
-        <link rel="stylesheet" href="{% static 'SchoolDesign/css/main.css' %}">
-    <!-- Bootstrap CSS -->
-<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
-
     <link rel="stylesheet" href="{% static 'SchoolDesign/css/bootstrap.min.css' %}">
-    <!-- Fontawesome CSS -->
-<!--    <link rel="stylesheet" href="css/all.min.css">-->
-      <link rel="stylesheet" href="{% static 'SchoolDesign/css/all.min.css' %}">
-    <!-- Flaticon CSS -->
-<!--    <link rel="stylesheet" href="fonts/flaticon.css">-->
-      <link rel="stylesheet" href="{% static 'SchoolDesign/fonts/flaticon.css' %}">
-    <!-- Animate CSS -->
-<!--    <link rel="stylesheet" href="css/animate.min.css">-->
-      <link rel="stylesheet" href="{% static 'SchoolDesign/css/animate.min.css' %}">
-    <!-- Custom CSS -->
-<!--    <link rel="stylesheet" href="style.css">-->
-      <link rel="stylesheet" href="{% static 'SchoolDesign/style.css' %}">
-    <!-- Modernize js -->
+    <link rel="stylesheet" href="{% static 'SchoolDesign/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'SchoolDesign/fonts/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'SchoolDesign/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'SchoolDesign/style.css' %}">
     <script src="{% static 'SchoolDesign/js/modernizr-3.6.0.min.js' %}"></script>
+    <style>
+    .info{
+        list-style:None;
+        background-color:#FF0000;
+        color:white;
+        box-shadow: 12px 12px 12px #e61c66;
+        text-align: center;
+    }
+        </style>
 </head>
-
 <body>
     <!-- Preloader Start Here -->
     <div id="preloader"></div>
-
-
     <!-- Preloader End Here -->
     <!-- Login Page Start Here -->
     <div class="login-page-wrap" >
         <div class="login-page-content">
-            <div class="login-box">
+            <div class="login-box" style="padding: 3rem 4rem;padding-bottom: 0px;min-width:440px;">
                 <div class="item-logo">
                     <br><br>
-                    <!-- <img src="https://sbsyindia.s3.amazonaws.com/school_static_image/logo11.jpg" alt="logo" width="80" height="100"> -->
-                    <img src="https://sbsyindia.s3.amazonaws.com/school_static_image/newsbsy.png" alt="logo" width="340" height="100">
-
+                     <img src="{% static 'SchoolDesign/img/logo1.png' %}" alt="logo" width="260" height="100" />
                 </div>
-                 <style>.info{
-                    list-style:None;
-                    background-color:#FF0000;
-                    color:white;
-                    box-shadow: 12px 12px 12px #e61c66;
-                    text-align: center;}
-                    </style>
-
                 {% if messages %}
                 <ul class="messages">
                     {% for message in messages %}
-
-
                     <li {% if message.tags %} class="{{message.tags}}"  {% endif %}>{{message}}</li>
                     {% endfor %}
-
-
                 </ul>
-
                 {% endif %}
-
-
-                 <style>.blinking{
-    animation:blinkingText 1.2s infinite;
-}
-@keyframes blinkingText{
-    0%{     color: #FF0000;    }
-    49%{    color: #FF0000; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #FF0000;    }
-}
-</style>
                 <form action="" class="login-form" method="POST">
                     		{% csrf_token %}
                     <div class="form-group">
                         <label>Username</label>
-                        <input type="text" placeholder="Enter usrename" class="form-control" name="username">
+                        <input type="text" placeholder="Enter username" class="form-control" name="username">
                         <i class="far fa-envelope"></i>
                     </div>
                     <div class="form-group">
@@ -102,55 +62,33 @@
                             <input type="checkbox" class="form-check-input" id="remember-me">
                             <label for="remember-me" class="form-check-label">Remember Me</label>
                         </div>
-                        <a href="/forget_password" class="forgot-btn">Forgot password</a>
+                        <a href="/forget_password" class="forgot-btn">Forgot password?</a>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="login-btn">Login</button>
                     </div>
+                    <div class="form-group" style="text-align: center;">
+                        <label style="font-weight:normal;">Customer Support </label>&nbsp;
+                        <a href="#" style="text-decoration: underline;">9588707203</a>
+                    </div>      
                 </form>
-
             </div>
-             <div class="sign-up"> Visit Our Demo School <a href="/demo_login" class="blinking">click here!</a></div>
-            
-            <div class="sign-up"> Register New School <a href="/add_school" class="blinking">click here!</a></div>
-
-            
-            <!--<div class="sign-up"> For more details <a href="/homepage" class="blinking">click here!</a></div>-->
-            
-            
-            <div class="sign-up">  Customer Support   <a href="#" class="blinking">9729888990</a></div>
-           <!--<div></div> <a href="tel:9729888990">Click Here To Call Support 9060555656</a></div>-->
-
-
+             <!-- <div class="sign-up"> Visit Our Demo School <a href="/demo_login" class="blinking">click here!</a></div> 
+            <div class="sign-up"> Register New School <a href="/add_school" class="blinking">click here!</a></div>       
+           -->
         </div>
     </div>
-
-    <!-- Login Page End Here -->
     <!-- jquery-->
-<!--    <script src="js/jquery-3.3.1.min.js"></script>-->
         <script src="{% static 'SchoolDesign/js/jquery-3.3.1.min.js' %}"></script>
-
     <!-- Plugins js -->
-<!--    <script src="js/plugins.js"></script>-->
         <script src="{% static 'SchoolDesign/js/plugins.js' %}"></script>
-
     <!-- Popper js -->
-<!--    <script src="js/popper.min.js"></script>-->
         <script src="{% static 'SchoolDesign/js/popper.min.js' %}"></script>
-
     <!-- Bootstrap js -->
-<!--    <script src="js/bootstrap.min.js"></script>-->
         <script src="{% static 'SchoolDesign/js/bootstrap.min.js' %}"></script>
-
     <!-- Scroll Up Js -->
-<!--    <script src="js/jquery.scrollUp.min.js"></script>-->
         <script src="{% static 'SchoolDesign/js/jquery.scrollUp.min.js' %}"></script>
-
     <!-- Custom Js -->
-<!--    <script src="js/main.js"></script>-->
     <script src="{% static 'SchoolDesign/js/main.js' %}"></script>
-
-
 </body>
-
 </html>
